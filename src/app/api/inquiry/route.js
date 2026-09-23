@@ -1,5 +1,6 @@
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phonePattern = /^\+?[0-9\s().-]{7,20}$/;
+const formSubmitEndpoint = "https://formsubmit.co/ajax/li1161870900@gmail.com";
 
 export async function POST(request) {
   let data;
@@ -9,17 +10,23 @@ export async function POST(request) {
     return Response.json({ error: "Please provide a valid name, email and phone number." }, { status: 422 });
   }
 
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.INQUIRY_FROM_EMAIL;
-  const to = process.env.INQUIRY_TO_EMAIL || "li18061128988@gmail.com";
-  if (!apiKey || !from) return Response.json({ error: "Enquiry delivery is not configured." }, { status: 503 });
-
-  const fields = [["Name", data.name], ["Email", data.email], ["Phone / WhatsApp", data.phone], ["Company", data.company], ["Country / region", data.country], ["Product requirement", data.productNeed], ["Message", data.message]];
-  const text = fields.filter(([, value]) => value?.trim()).map(([label, value]) => `${label}: ${value.trim()}`).join("\n");
-  const delivery = await fetch("https://api.resend.com/emails", {
+  const delivery = await fetch(formSubmitEndpoint, {
     method: "POST",
-    headers: { authorization: `Bearer ${apiKey}`, "content-type": "application/json" },
-    body: JSON.stringify({ from, to: [to], reply_to: data.email, subject: `New website enquiry from ${data.name.trim()}`, text }),
+    headers: { "content-type": "application/json", accept: "application/json" },
+    cache: "no-store",
+    body: JSON.stringify({
+      name: data.name.trim(),
+      email: data.email.trim(),
+      phone: data.phone.trim(),
+      company: data.company?.trim() || "",
+      country: data.country?.trim() || "",
+      product_need: data.productNeed?.trim() || "",
+      message: data.message?.trim() || "",
+      _subject: `New Supfield website enquiry from ${data.name.trim()}`,
+      _template: "table",
+      _replyto: data.email.trim(),
+      _honey: "",
+    }),
   });
   if (!delivery.ok) return Response.json({ error: "Email delivery failed." }, { status: 502 });
   return Response.json({ ok: true });

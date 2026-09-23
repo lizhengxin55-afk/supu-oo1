@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { ProductTemplate } from "./ProductTemplate";
 import { ContactPage } from "./ContactPage";
@@ -7,6 +9,8 @@ import { ProductListPage } from "./site-pages/ProductListPage";
 import { BlogListPage } from "./site-pages/BlogListPage";
 import { BlogSinglePage } from "./site-pages/BlogSinglePage";
 import { HomeContents } from "./HomeContents";
+import { WhatsAppButton } from "./WhatsAppButton";
+import { LanguageSwitcher } from "./i18n/LanguageSwitcher";
 
 const products = [
   { title: "PVC Coated Fabrics", note: "Wide range of specifications and colors", image: "/assets/pvc-product.jpg", position: "10% 40%" },
@@ -34,14 +38,15 @@ const faqs = [
 function scrollToQuote() { document.querySelector("#quote")?.scrollIntoView({ behavior: "smooth" }); }
 
 export function App({ pathname = "/" }) {
-  if (pathname === "/product") return <ProductPage />;
-  if (pathname === "/product-list") return <ProductListPage />;
-  if (pathname === "/blog-list") return <BlogListPage />;
-  if (pathname === "/blog-single") return <BlogSinglePage />;
-  if (pathname === "/inquiry") return <InquiryPage />;
-  if (pathname === "/contact") return <ContactPage />;
-  if (pathname.startsWith("/products/")) return <ProductTemplate />;
-  return <HomePage />;
+  let page = <HomePage />;
+  if (pathname === "/product") page = <ProductPage />;
+  else if (pathname === "/product-list") page = <ProductListPage />;
+  else if (pathname === "/blog-list") page = <BlogListPage />;
+  else if (pathname === "/blog-single") page = <BlogSinglePage />;
+  else if (pathname === "/inquiry") page = <InquiryPage />;
+  else if (pathname === "/contact") page = <ContactPage />;
+  else if (pathname.startsWith("/products/")) page = <ProductTemplate />;
+  return <>{page}<LanguageSwitcher pathname={pathname} /><WhatsAppButton /></>;
 }
 
 function HomePage() {

@@ -1,8 +1,0 @@
-"use client";
-
-import { usePathname } from "next/navigation";
-import { App } from "../../App";
-
-export default function SitePage() {
-  return <App pathname={usePathname() || "/"} />;
-}
