@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle, EnvelopeSimple, ShieldCheck } from "@phosphor-
 const initialValues = { name: "", email: "", phone: "", company: "", country: "", productNeed: "", message: "", website: "" };
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phonePattern = /^\+?[0-9\s().-]{7,20}$/;
-const formSubmitEndpoint = "https://formsubmit.co/aad4c1360e31ef5c56175c3b588100a0";
+const formSubmitEndpoint = "https://formsubmit.co/li1161870900@gmail.com";
 
 function validate(values) {
   const errors = {};
