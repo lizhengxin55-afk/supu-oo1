@@ -1,6 +1,6 @@
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phonePattern = /^\+?[0-9\s().-]{7,20}$/;
-const formSubmitEndpoint = "https://formsubmit.co/ajax/li1161870900@gmail.com";
+const formSubmitEndpoint = "https://formsubmit.co/ajax/aad4c1360e31ef5c56175c3b588100a0";
 
 export async function POST(request) {
   let data;
@@ -28,6 +28,7 @@ export async function POST(request) {
       _honey: "",
     }),
   });
-  if (!delivery.ok) return Response.json({ error: "Email delivery failed." }, { status: 502 });
+  const result = await delivery.json().catch(() => null);
+  if (!delivery.ok || (result?.success !== "true" && result?.success !== true)) return Response.json({ error: "Email delivery failed." }, { status: 502 });
   return Response.json({ ok: true });
 }
