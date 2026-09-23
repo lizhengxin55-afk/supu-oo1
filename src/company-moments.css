@@ -1,0 +1,61 @@
+.moments-section {
+  padding: 112px 0;
+  background: #f0f0ed;
+}
+
+.moments-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 64px;
+  margin-bottom: 38px;
+}
+
+.moments-heading > div { max-width: 760px; }
+
+.moments-heading > p {
+  max-width: 320px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.moments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.moment-card {
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.moment-card img {
+  display: block;
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
+.moment-card.team {
+  display: grid;
+  grid-column: span 2;
+  grid-template-columns: 1.4fr .6fr;
+}
+
+.moment-card.team img { height: 100%; min-height: 345px; }
+
+.moment-card > div { padding: 23px 25px 26px; }
+.moment-card small { color: #3988ba; font-size: 10px; letter-spacing: .14em; }
+.moment-card h3 { margin: 18px 0 8px; font-size: 24px; letter-spacing: -.035em; }
+.moment-card p { max-width: 330px; margin: 0; color: #50585b; font-size: 13px; line-height: 1.6; }
+
+@media (max-width: 780px) {
+  .moments-section { padding: 70px 0; }
+  .moments-heading { display: block; }
+  .moments-heading > p { margin-top: 24px; }
+  .moments-grid { grid-template-columns: 1fr; }
+  .moment-card.team { display: block; grid-column: auto; }
+  .moment-card img, .moment-card.team img { height: 245px; min-height: 0; }
+}
