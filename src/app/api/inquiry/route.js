@@ -1,6 +1,6 @@
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phonePattern = /^\+?[0-9\s().-]{7,20}$/;
-const formSubmitEndpoint = "https://formsubmit.co/ajax/li1161870900@gmail.com";
+const formSubmitEndpoint = "https://formsubmit.co/ajax/lizhengxin55@gmail.com";
 
 export async function POST(request) {
   let data;
