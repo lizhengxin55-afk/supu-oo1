@@ -47,6 +47,25 @@
   margin-left: 0;
 }
 
+/* Keep the Products trigger on the exact same vertical baseline as the
+   remaining primary-navigation links. */
+.site-header > nav {
+  align-items: center;
+}
+
+.site-header > nav > a,
+.site-header .mega-menu-trigger,
+.site-header .products-nav-button {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  line-height: 1;
+}
+
+.site-header .products-nav-button {
+  padding-block: 0;
+}
+
 .site-header > .quote-button,
 .product-header > .header-quote,
 .contact-header > .header-message,
