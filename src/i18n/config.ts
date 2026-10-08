@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
-export const locales = ["en", "fr", "es", "ja", "de"] as const;
+export const locales = ["en", "zh", "fr", "es", "ja", "de"] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "en";
-export const localeLabels: Record<Locale, string> = { en: "English", fr: "Français", es: "Español", ja: "日本語", de: "Deutsch" };
-export const localeHreflang: Record<Locale, string> = { en: "en", fr: "fr", es: "es", ja: "ja", de: "de" };
+export const localeLabels: Record<Locale, string> = { en: "English", zh: "中文", fr: "Français", es: "Español", ja: "日本語", de: "Deutsch" };
+export const localeHreflang: Record<Locale, string> = { en: "en", zh: "zh-CN", fr: "fr", es: "es", ja: "ja", de: "de" };
 export const routeKeys = ["home", "product", "productList", "blogList", "blogSingle", "contact", "inquiry", "soundproofBarrier"] as const;
 export type RouteKey = (typeof routeKeys)[number];
 const routePaths: Record<RouteKey, string> = { home: "/", product: "/product", productList: "/product-list", blogList: "/blog-list", blogSingle: "/blog-single", contact: "/contact", inquiry: "/inquiry", soundproofBarrier: "/products/pvc-soundproof-barrier" };
@@ -16,6 +16,7 @@ export const getRouteKey = (segments: string[]): RouteKey | null => routeKeys.fi
 export const localizedPath = (locale: Locale, routeKey: RouteKey) => locale === defaultLocale ? getRoutePath(routeKey) : `/${locale}${getRoutePath(routeKey) === "/" ? "" : getRoutePath(routeKey)}`;
 
 const seo: Record<Locale, Record<RouteKey, { title: string; description: string }>> = {
+  zh: { home: { title: "工业 PVC 篷布与涂层布 | Supfield Technology", description: "面向全球项目的工业 PVC 涂层布、篷布及 OEM/ODM 材料解决方案。" }, product: { title: "工业 PVC 篷布与面料 | Supfield", description: "适用于建筑、运输及临时工程的高强度 PVC 和 EVA 篷布。" }, productList: { title: "工业 PVC 产品分类 | Supfield", description: "浏览 PVC 涂层布、篷布、隔音屏障和定制工业盖布。" }, blogList: { title: "PVC 面料采购指南与文章 | Supfield", description: "为工业 PVC 面料和篷布采购商提供实用内容。" }, blogSingle: { title: "如何选择工业盖布用 PVC 面料 | Supfield", description: "为工业盖布项目制定 PVC 面料规格的实用指南。" }, contact: { title: "联系 Supfield Technology | 工业 PVC 面料供应商", description: "咨询 PVC 面料规格、OEM/ODM 项目及出口询盘。" }, inquiry: { title: "获取工业 PVC 面料报价 | Supfield", description: "提交您的 PVC 面料、篷布或定制工业盖布需求。" }, soundproofBarrier: { title: "PVC 隔音屏障制造商 | Supfield", description: "用于建筑、工业区域及基础设施项目的定制 PVC 隔音屏障。" } },
   en: {
     home: { title: "Industrial PVC Fabrics & Tarpaulins | Supfield Technology", description: "Industrial PVC fabrics, tarpaulins and OEM/ODM material solutions for global projects." },
     product: { title: "Industrial PVC Fabrics for Global Projects | Supfield", description: "Explore high-strength PVC and EVA tarpaulins for construction, transport and temporary engineering." },
