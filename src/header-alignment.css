@@ -1,0 +1,132 @@
+/* Shared header geometry keeps the brand, navigation and conversion action
+   aligned across every public route. */
+:root {
+  --site-gutter: max(28px, calc((100vw - 1250px) / 2));
+  --site-header-height: 78px;
+}
+
+.site-header,
+.product-header,
+.contact-header,
+.inquiry-header,
+.pvc-header,
+.product-list-header,
+.blog-list-header,
+.blog-single-header {
+  height: var(--site-header-height);
+  min-height: var(--site-header-height);
+  padding-inline: var(--site-gutter);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: 32px;
+}
+
+.site-header > .brand,
+.product-header > .product-brand,
+.contact-header > .contact-brand,
+.inquiry-header > .inquiry-brand,
+.pvc-header > .pvc-brand,
+.product-list-header > .product-list-brand,
+.blog-list-header > .blog-list-brand,
+.blog-single-header > .blog-single-brand {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.site-header > nav,
+.product-header > nav,
+.contact-header > nav,
+.inquiry-header > nav,
+.pvc-header > nav,
+.product-list-header > .product-list-nav,
+.blog-list-header > .blog-list-nav,
+.blog-single-header > .blog-single-nav {
+  grid-column: 2;
+  justify-self: center;
+  margin-left: 0;
+}
+
+.site-header > .quote-button,
+.product-header > .header-quote,
+.contact-header > .header-message,
+.inquiry-header > .inquiry-header-link,
+.pvc-header > .pvc-header-cta,
+.product-list-header > .product-list-quote,
+.blog-list-header > .blog-list-quote,
+.blog-single-header > .blog-single-quote {
+  grid-column: 3;
+  justify-self: end;
+  margin-left: 0;
+}
+
+.site-header > nav,
+.product-header > nav,
+.contact-header > nav,
+.inquiry-header > nav,
+.pvc-header > nav,
+.product-list-header > .product-list-nav,
+.blog-list-header > .blog-list-nav,
+.blog-single-header > .blog-single-nav,
+.site-header > .quote-button,
+.product-header > .header-quote,
+.contact-header > .header-message,
+.inquiry-header > .inquiry-header-link,
+.pvc-header > .pvc-header-cta,
+.product-list-header > .product-list-quote,
+.blog-list-header > .blog-list-quote,
+.blog-single-header > .blog-single-quote {
+  line-height: 1;
+}
+
+.site-header > .brand img,
+.product-header > .product-brand img,
+.contact-header > .contact-brand img,
+.inquiry-header > .inquiry-brand img,
+.pvc-header > .pvc-brand img,
+.product-list-header > .product-list-brand img,
+.blog-list-header > .blog-list-brand img,
+.blog-single-header > .blog-single-brand img {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  object-fit: contain;
+}
+
+@media (max-width: 780px) {
+  .site-header,
+  .product-header,
+  .contact-header,
+  .inquiry-header,
+  .pvc-header,
+  .product-list-header,
+  .blog-list-header,
+  .blog-single-header {
+    height: 66px;
+    min-height: 66px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 16px;
+  }
+
+  .site-header > nav,
+  .product-header > nav,
+  .contact-header > nav,
+  .inquiry-header > nav,
+  .pvc-header > nav,
+  .product-list-header > .product-list-nav,
+  .blog-list-header > .blog-list-nav,
+  .blog-single-header > .blog-single-nav {
+    display: none;
+  }
+
+  .site-header > .quote-button,
+  .product-header > .header-quote,
+  .contact-header > .header-message,
+  .inquiry-header > .inquiry-header-link,
+  .pvc-header > .pvc-header-cta,
+  .product-list-header > .product-list-quote,
+  .blog-list-header > .blog-list-quote,
+  .blog-single-header > .blog-single-quote {
+    grid-column: 2;
+  }
+}
