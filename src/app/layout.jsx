@@ -16,8 +16,11 @@ import "../header-alignment.css";
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.geelung.com"),
+  title: { default: "Jiangsu Guolong | Industrial PVC Fabrics & Geosynthetics", template: "%s | Jiangsu Guolong" },
+  description: "Manufacturer of PVC coated fabrics, soundproof tarpaulins, fireproof scaffold mesh, geocell and geonet for global projects.",
 };
 
 export default function RootLayout({ children }) {
-  return <html lang="en"><body>{children}</body></html>;
+  const organization = { "@context": "https://schema.org", "@type": "Organization", name: "Jiangsu Guolong New Materials Technology Co., Ltd.", url: "https://www.geelung.com", logo: "https://www.geelung.com/assets/guolong-logo.jpg", description: "Industrial PVC fabrics and geosynthetics manufacturer for global construction and engineering projects.", address: { "@type": "PostalAddress", streetAddress: "11 Huaxia Road", addressLocality: "Xuzhou", addressRegion: "Jiangsu", addressCountry: "CN" }, contactPoint: [{ "@type": "ContactPoint", contactType: "sales", availableLanguage: ["English", "Chinese"] }] };
+  return <html lang="en"><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} /></body></html>;
 }

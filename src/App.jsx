@@ -13,12 +13,12 @@ import { WhatsAppButton } from "./WhatsAppButton";
 import { LanguageSwitcher } from "./i18n/LanguageSwitcher";
 
 const products = [
-  { title: "PVC Coated Fabrics", note: "Wide range of specifications and colors", image: "/assets/pvc-product.jpg", position: "10% 40%" },
-  { title: "PVC Tarpaulins", note: "Heavy-duty, waterproof, UV resistant", image: "/assets/pvc-product.jpg", position: "72% 62%" },
-  { title: "Fire-Retardant Tarps", note: "Flame-retardant solutions for construction", image: "/assets/soundproof-product.jpg", position: "17% 46%" },
-  { title: "Soundproof Barriers", note: "Noise control for construction sites", image: "/assets/soundproof-product.jpg", position: "78% 55%" },
+  { title: "PVC Double Side Coated Fabric", note: "300–1200 gsm, waterproof, FR and UV-resistant", image: "/assets/pvc-product.jpg", position: "10% 40%" },
+  { title: "PVC Soundproof Tarpaulin", note: "Scaffold noise, dust and wind protection", image: "/assets/soundproof-product.jpg", position: "72% 62%" },
+  { title: "PVC Laminated Fabric", note: "Flexible fabric for tarpaulins and protective sheets", image: "/assets/pvc-coated-fabric.png", position: "17% 46%" },
+  { title: "PVC Coated Canvas Fabric", note: "Heavy-duty covers, tents and air ducts", image: "/assets/pvc-product.jpg", position: "78% 55%" },
   { title: "Geocell & Geonet", note: "Materials for slopes and civil engineering", image: "/assets/geocell-product.jpg", position: "80% 56%" },
-  { title: "Custom Materials", note: "OEM and ODM specifications available", image: "/assets/pvc-product.jpg", position: "48% 28%" },
+  { title: "Fireproof Scaffold Mesh", note: "Lightweight construction safety protection", image: "/assets/soundproof-product.jpg", position: "48% 28%" },
 ];
 
 const applications = [
@@ -40,10 +40,10 @@ function scrollToQuote() { document.querySelector("#quote")?.scrollIntoView({ be
 export function App({ pathname = "/" }) {
   let page = <HomePage />;
   if (pathname === "/product") page = <ProductPage />;
-  else if (pathname === "/product-list") page = <ProductListPage />;
+  else if (pathname === "/product-list" || pathname === "/products") page = <ProductListPage />;
   else if (pathname === "/blog-list") page = <BlogListPage />;
   else if (pathname === "/blog-single") page = <BlogSinglePage />;
-  else if (pathname === "/inquiry") page = <InquiryPage />;
+  else if (pathname === "/inquiry" || pathname === "/request-sample") page = <InquiryPage />;
   else if (pathname === "/contact") page = <ContactPage />;
   else if (pathname.startsWith("/products/")) page = <ProductTemplate />;
   return <>{page}<LanguageSwitcher pathname={pathname} /><WhatsAppButton /></>;
