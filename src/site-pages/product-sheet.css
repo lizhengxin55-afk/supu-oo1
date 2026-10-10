@@ -1,0 +1,79 @@
+.pvc-product-sheet {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(460px, 1.18fr);
+  gap: clamp(35px, 7vw, 105px);
+  align-items: center;
+  padding: 100px max(28px, calc((100vw - 1250px) / 2));
+  background: #fff;
+}
+
+.pvc-product-sheet-copy { max-width: 440px; }
+.pvc-product-sheet-copy h2 {
+  margin: 0;
+  font-size: clamp(35px, 3.8vw, 55px);
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+.pvc-product-sheet-copy > p:not(.pvc-eyebrow) {
+  margin: 23px 0;
+  color: #536169;
+  font-size: 15px;
+  line-height: 1.65;
+}
+.pvc-product-sheet-copy ul {
+  display: grid;
+  gap: 10px;
+  margin: 27px 0;
+  padding: 0;
+  list-style: none;
+}
+.pvc-product-sheet-copy li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.pvc-product-sheet-copy li::before {
+  content: "✓";
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  flex: none;
+  border-radius: 50%;
+  background: #e4f2fa;
+  color: var(--pvc-blue);
+  font-weight: bold;
+}
+.pvc-product-sheet-copy a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 17px;
+  background: var(--pvc-blue);
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+.pvc-product-sheet-art {
+  padding: 12px;
+  background: #edf2ef;
+  box-shadow: 0 22px 42px rgba(10, 28, 21, .13);
+}
+.pvc-product-sheet-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+@media (max-width: 780px) {
+  .pvc-product-sheet {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}

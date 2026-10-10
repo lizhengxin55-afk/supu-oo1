@@ -6,6 +6,7 @@ import "../inquiry-page.css";
 import "../product-template.css";
 import "../company-moments.css";
 import "../site-pages/product-page.css";
+import "../site-pages/product-sheet.css";
 import "../site-pages/product-list-page.css";
 import "../site-pages/blog-list-page.css";
 import "../site-pages/blog-single-page.css";
