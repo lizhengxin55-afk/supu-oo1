@@ -14,6 +14,7 @@ import "../whatsapp-button.css";
 import "../tailwind.css";
 import "../i18n/language-switcher.css";
 import "../header-alignment.css";
+import "../hero-video.css";
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.geelung.com"),
