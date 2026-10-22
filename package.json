@@ -2,18 +2,25 @@
   "name": "jilong-homepage-v1",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test:sites": "node --test tests/sites-worker.test.mjs"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@vitejs/plugin-react": "5.0.4",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "react-icons": "^5.7.0",
-    "vite": "6.4.2"
+    "next": "latest",
+    "next-intl": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
   }
 }
+
