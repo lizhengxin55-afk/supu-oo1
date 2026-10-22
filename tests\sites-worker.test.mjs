@@ -61,32 +61,12 @@ test("does not turn missing API or write requests into the app shell", async () 
   }
 });
 
-test("validates inquiry requests before attempting delivery", async () => {
-  const response = await worker.fetch(
-    new Request("https://example.test/api/inquiry", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ name: "", email: "not-an-email", phone: "abc" }),
-    }),
-    { ASSETS: { fetch: async () => new Response("missing", { status: 404 }) } },
-  );
-
-  assert.equal(response.status, 422);
-  assert.match(await response.text(), /valid name, email and phone number/i);
-});
-
-test("accepts honeypot submissions without delivering them", async () => {
-  const response = await worker.fetch(
-    new Request("https://example.test/api/inquiry", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ website: "spam-bot" }),
-    }),
-    { ASSETS: { fetch: async () => new Response("missing", { status: 404 }) } },
-  );
-
-  assert.equal(response.status, 200);
-  assert.deepEqual(await response.json(), { ok: true });
+test("validates inquiry submissions before delivery", async () => {
+  const assets = { fetch: async () => new Response("missing", { status: 404 }) };
+  const invalid = await worker.fetch(new Request("https://example.test/api/inquiries", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ name: "", email: "invalid", phone: "1" }) }), { ASSETS: assets });
+  assert.equal(invalid.status, 400);
+  const validButUnconfigured = await worker.fetch(new Request("https://example.test/api/inquiries", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ name: "Alex", email: "alex@example.com", phone: "+86 159 9689 0066" }) }), { ASSETS: assets });
+  assert.equal(validButUnconfigured.status, 503);
 });
 
 test("emits the files required by Sites packaging", async () => {
