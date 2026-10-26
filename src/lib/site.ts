@@ -1,7 +1,7 @@
 import type {AppLocale} from '@/i18n/routing';
 
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.geelung.com';
-export const BRAND_NAME = 'JILONG TECHNOLOGY';
+export const BRAND_NAME = 'GEELUNG';
 
 export const languageLabels: Record<AppLocale, string> = {
   en: '🇬🇧 English',
@@ -41,4 +41,3 @@ export function languageAlternates(pathname: string) {
     'x-default': absoluteUrl('en', pathname)
   };
 }
-

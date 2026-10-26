@@ -9,7 +9,7 @@ import '../globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   robots: {index: true, follow: true},
-  icons: {icon: '/assets/jilong-logo.jpg'}
+  icons: {icon: '/assets/geelung-logo-web.jpg'}
 };
 
 export function generateStaticParams() {
@@ -22,4 +22,3 @@ export default async function LocaleLayout({children, params}: Readonly<{childre
   setRequestLocale(locale);
   return <html lang={locale}><body><NextIntlClientProvider>{children}</NextIntlClientProvider></body></html>;
 }
-
