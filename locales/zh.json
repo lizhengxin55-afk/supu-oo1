@@ -1,7 +1,97 @@
 {
-  "navigation":{"tagline":"可靠流体解决方案，服务更洁净的世界","support":"全球供货 · 技术支持","products":"产品中心","applications":"应用行业","resources":"技术资源","contact":"联系我们","rfq":"获取报价"},
-  "home":{"metaTitle":"吉隆环保 | 工业管路与流体系统制造商","metaDescription":"面向全球B2B项目提供工业管材、管件、阀门及水处理配件。","metaKeywords":"UPVC管材, CPVC管件, 工业阀门, 膜壳, 水处理配件","eyebrow":"面向可持续未来的流体解决方案","title":"为您的工程项目打造工业流体组件","intro":"来自专业制造商的可靠管路、阀门与水处理解决方案。","catalog":"下载产品目录","proofOne":"始于2010年","proofOneSub":"专注流体与水处理解决方案","proofTwo":"60,000平方米工厂","proofTwoSub":"规模化生产，稳定供货","proofThree":"OEM / ODM","proofThreeSub":"灵活定制，服务全球伙伴","productsEyebrow":"产品中心","productsTitle":"完整的流体组件解决方案","applicationsTitle":"服务多元工业领域","applicationsOne":"水处理","applicationsTwo":"化工处理","applicationsThree":"环保工程","applicationText":"为严苛工业流体系统提供可靠组件。","factoryEyebrow":"我们的工厂","factoryTitle":"强大的制造能力","factoryText":"从原材料选择到全球交付，吉隆环保为工业采购提供可靠支持。","factoryOne":"生产工厂","factoryTwo":"稳定生产","factoryThree":"OEM / ODM 支持","resourcesTitle":"产品目录与技术支持","resourcesText":"下载最新产品目录，并为您的项目获取技术资料。"},
-  "products":{"membraneHousing":{"title":"PVC超滤膜壳","description":"适用于工业水处理系统的PVC膜壳。","keywords":"PVC膜壳, 超滤膜壳, 水处理配件","introduction":"耐用的PVC膜壳，适用于超滤及工业水处理项目。"},"pipeFittings":{"title":"UPVC 与 CPVC 管件","description":"用于工业流体输送的UPVC和CPVC管件。","keywords":"UPVC管件, CPVC管件, 工业管路系统","introduction":"耐腐蚀管件，为工业管路连接提供可靠保障。"},"industrialValves":{"title":"工业PVC阀门","description":"用于流体控制的工业PVC球阀与蝶阀。","keywords":"PVC球阀, PVC蝶阀, 工业阀门","introduction":"适用于流体隔离与控制应用的实用阀门解决方案。"},"transparentPipe":{"title":"透明PVC管","description":"适用于可视化工艺监控与工业应用的透明PVC管。","keywords":"透明PVC管, 透明PVC管材, 工业透明管","introduction":"可观察介质和流动状态的透明管材产品。"}},
-  "productPage":{"back":"产品中心","specifications":"产品亮点","specOne":"材料选项可按项目要求确认","specTwo":"尺寸及连接方式可按需提供","specThree":"提供B2B工程应用技术支持","request":"索取产品资料"},
-  "contact":{"title":"联系吉隆环保","description":"请告诉我们您的应用、产品需求和目标市场。","addressTitle":"工厂地址","address":"江苏省徐州市沛县龙固镇工业园区","formTitle":"获取报价","name":"姓名","email":"企业邮箱","phone":"联系电话","company":"公司名称","country":"国家/地区","message":"产品需求或留言","submit":"发送询盘"}
+  "navigation": {
+    "tagline": "可靠流体解决方案，服务更洁净的世界",
+    "support": "全球供货 · 技术支持",
+    "products": "产品中心",
+    "applications": "应用行业",
+    "resources": "技术资源",
+    "contact": "联系我们",
+    "rfq": "获取报价"
+  },
+  "home": {
+    "metaTitle": "吉隆环保 | 工业管路与流体系统制造商",
+    "metaDescription": "面向全球B2B项目提供工业管材、管件、阀门及水处理配件。",
+    "metaKeywords": "UPVC管材, CPVC管件, 工业阀门, 膜壳, 水处理配件",
+    "eyebrow": "面向可持续未来的流体解决方案",
+    "title": "为您的工程项目打造工业流体组件",
+    "intro": "来自专业制造商的可靠管路、阀门与水处理解决方案。",
+    "catalog": "下载产品目录",
+    "proofOne": "始于2010年",
+    "proofOneSub": "专注流体与水处理解决方案",
+    "proofTwo": "60,000平方米工厂",
+    "proofTwoSub": "规模化生产，稳定供货",
+    "proofThree": "OEM / ODM",
+    "proofThreeSub": "灵活定制，服务全球伙伴",
+    "productsEyebrow": "产品中心",
+    "productsTitle": "完整的流体组件解决方案",
+    "applicationsTitle": "服务多元工业领域",
+    "applicationsOne": "水处理",
+    "applicationsTwo": "化工处理",
+    "applicationsThree": "环保工程",
+    "applicationText": "为严苛工业流体系统提供可靠组件。",
+    "factoryEyebrow": "我们的工厂",
+    "factoryTitle": "强大的制造能力",
+    "factoryText": "从原材料选择到全球交付，吉隆环保为工业采购提供可靠支持。",
+    "factoryOne": "生产工厂",
+    "factoryTwo": "稳定生产",
+    "factoryThree": "OEM / ODM 支持",
+    "resourcesTitle": "产品目录与技术支持",
+    "resourcesText": "下载最新产品目录，并为您的项目获取技术资料。"
+  },
+  "products": {
+    "membraneHousing": {
+      "title": "PVC超滤膜壳",
+      "description": "适用于工业水处理系统的PVC膜壳。",
+      "keywords": "PVC膜壳, 超滤膜壳, 水处理配件",
+      "introduction": "耐用的PVC膜壳，适用于超滤及工业水处理项目。",
+      "cardTitle": "钩编绳",
+      "cardDescription": "高强度白色钩编绳，规格齐全，可定制外径"
+    },
+    "pipeFittings": {
+      "title": "UPVC 与 CPVC 管件",
+      "description": "用于工业流体输送的UPVC和CPVC管件。",
+      "keywords": "UPVC管件, CPVC管件, 工业管路系统",
+      "introduction": "耐腐蚀管件，为工业管路连接提供可靠保障。",
+      "cardTitle": "编织绳",
+      "cardDescription": "工业用编织绳，耐磨抗老化，适配多种场景"
+    },
+    "industrialValves": {
+      "title": "工业PVC阀门",
+      "description": "用于流体控制的工业PVC球阀与蝶阀。",
+      "keywords": "PVC球阀, PVC蝶阀, 工业阀门",
+      "introduction": "适用于流体隔离与控制应用的实用阀门解决方案。",
+      "cardTitle": "成卷编织绳",
+      "cardDescription": "批量包装绳卷，适合外贸订单，稳定供货"
+    },
+    "transparentPipe": {
+      "title": "透明PVC管",
+      "description": "适用于可视化工艺监控与工业应用的透明PVC管。",
+      "keywords": "透明PVC管, 透明PVC管材, 工业透明管",
+      "introduction": "可观察介质和流动状态的透明管材产品。",
+      "cardTitle": "定制编织绳",
+      "cardDescription": "支持OEM/ODM定制，可按需调整尺寸参数"
+    }
+  },
+  "productPage": {
+    "back": "产品中心",
+    "specifications": "产品亮点",
+    "specOne": "材料选项可按项目要求确认",
+    "specTwo": "尺寸及连接方式可按需提供",
+    "specThree": "提供B2B工程应用技术支持",
+    "request": "索取产品资料"
+  },
+  "contact": {
+    "title": "联系吉隆环保",
+    "description": "请告诉我们您的应用、产品需求和目标市场。",
+    "addressTitle": "工厂地址",
+    "address": "江苏省徐州市沛县龙固镇工业园区",
+    "formTitle": "获取报价",
+    "name": "姓名",
+    "email": "企业邮箱",
+    "phone": "联系电话",
+    "company": "公司名称",
+    "country": "国家/地区",
+    "message": "产品需求或留言",
+    "submit": "发送询盘"
+  }
 }
