@@ -21,6 +21,11 @@ type AboutCopy = {
   supportItems: Array<[string, string]>;
   recordsTitle: string;
   recordsText: string;
+  credentialsTitle: string;
+  credentials: Array<[string, string]>;
+  technologyTitle: string;
+  technologyText: string;
+  technologyItems: Array<[string, string]>;
   quote: string;
   resources: string;
 };
@@ -29,7 +34,7 @@ const english: AboutCopy = {
   title: 'About GEELUNG',
   metaDescription: 'Learn about Jiangsu Geelung Environmental Protection Technology Co., Ltd. and its B2B support for braided rope and crochet rope procurement.',
   eyebrow: 'GEELUNG · COMPANY PROFILE',
-  intro: 'Jiangsu Geelung Environmental Protection Technology Co., Ltd. is located in Longgu Industrial Park, Peixian, Xuzhou, Jiangsu, China. We support overseas buyers with braided rope and crochet rope products, specification communication, export packing coordination and responsive RFQ service.',
+  intro: 'Jiangsu Geelung Environmental Protection Technology Co., Ltd. is located in Longgu Industrial Park, Peixian, Xuzhou, Jiangsu, China. Built on environmental-technology, rope-net and textile-product development, we support overseas buyers with braided rope and crochet rope products, specification communication, export packing coordination and responsive RFQ service.',
   focusTitle: 'A practical partner for industrial rope procurement',
   focusText: 'Our current product focus is white braided rope and crochet rope supplied in rolls, large spools and export-ready packing formats. For each project, we work from the required diameter, construction, quantity, application and destination so the quotation and supply plan are clear before production.',
   imageAlt: 'GEELUNG braided rope rolls prepared for industrial orders',
@@ -37,7 +42,7 @@ const english: AboutCopy = {
     ['Company', 'Jiangsu Geelung Environmental Protection Technology Co., Ltd.'],
     ['Brand', 'GEELUNG · 吉隆环保'],
     ['Location', 'Longgu Industrial Park, Peixian, Xuzhou, Jiangsu, China'],
-    ['Product focus', 'Braided rope and crochet rope for B2B supply'],
+    ['Current product focus', 'Braided rope and crochet rope for B2B supply'],
     ['Service', 'Specification review, packing confirmation and export inquiry support']
   ],
   supportTitle: 'Built around a clearer B2B workflow',
@@ -48,7 +53,22 @@ const english: AboutCopy = {
     ['Export inquiry coordination', 'Send your RFQ with quantity and destination. We follow up on quotation details, production communication and the shipping documents required for the order.']
   ],
   recordsTitle: 'Company information',
-  recordsText: 'Public enterprise lists identify Jiangsu Geelung Environmental Protection Technology Co., Ltd. in Peixian and list it among technology-based SMEs. Product specifications, order documentation and any compliance requirements are confirmed case by case before production.',
+  recordsText: 'Jiangsu Geelung Environmental Protection Technology Co., Ltd. is an integrated technology enterprise combining environmental-technology R&D, textile-product and plastic-part manufacturing, logistics transportation, and import and export business. The company information highlights patented advantages in environmental technologies including MBR membrane liner tubes, together with national and provincial qualifications and business coverage across domestic and overseas markets. For the current export website, GEELUNG focuses on clear, order-specific rope product information and confirms specifications, documents and compliance requirements case by case before production.',
+  credentialsTitle: 'Qualifications & recognition',
+  credentials: [
+    ['High-tech enterprise', 'Recognized in 2023'],
+    ['Technology-based SME', 'Listed in 2025'],
+    ['Occupational health & safety management system', 'Certificate validity listed through 27 Oct 2028'],
+    ['Pollutant discharge permit', 'Permit validity listed through 07 Sep 2030'],
+    ['Business credit', 'Previously recognized as a contract-honoring, credit-respecting enterprise']
+  ],
+  technologyTitle: 'Technology & application foundation',
+  technologyText: 'The supplied company information describes a diversified development base, including MBR membrane liner products, rope-net and textile products, and related manufacturing technologies. This technical background supports practical product development and project communication for different end-use requirements.',
+  technologyItems: [
+    ['Technical development', 'The company information lists multiple invention patents, including MBR membrane liner tube and reinforced internal support-tube technologies.'],
+    ['Digital production support', 'The company profile also describes internally developed systems for intelligent MBR liner production monitoring and environmental-equipment data analysis.'],
+    ['Application & market reach', 'Products are described for aerospace, sports and leisure, agricultural breeding and public-welfare support applications, with sales coverage in more than 50 countries and regions.']
+  ],
   quote: 'Request a Quote',
   resources: 'Technical Resources'
 };
@@ -57,7 +77,7 @@ const chinese: AboutCopy = {
   title: '关于吉隆环保',
   metaDescription: '了解江苏吉隆环保科技有限公司，以及我们为海外编织绳、钩编绳采购客户提供的规格确认、包装与询盘对接支持。',
   eyebrow: 'GEELUNG · 公司简介',
-  intro: '江苏吉隆环保科技有限公司位于江苏省徐州市沛县龙固镇工业园区。公司面向海外采购客户提供编织绳、钩编绳产品，以及规格沟通、出口包装协调和询盘对接服务。',
+  intro: '江苏吉隆环保科技有限公司位于江苏省徐州市沛县龙固镇工业园区。公司拥有环保技术、绳网与纺织制品等研发制造基础，现面向海外采购客户提供编织绳、钩编绳产品，以及规格沟通、出口包装协调和询盘对接服务。',
   focusTitle: '服务工业绳类采购的务实伙伴',
   focusText: '当前产品以白色编织绳、钩编绳为主，可提供成卷、大盘及适配出口订单的包装形式。每个项目从所需外径、结构、数量、应用场景和目的国出发，在生产前明确报价与供货方案。',
   imageAlt: 'GEELUNG 吉隆环保工业订单用编织绳卷',
@@ -65,7 +85,7 @@ const chinese: AboutCopy = {
     ['公司名称', '江苏吉隆环保科技有限公司'],
     ['品牌名称', 'GEELUNG · 吉隆环保'],
     ['公司地址', '江苏省徐州市沛县龙固镇工业园区'],
-    ['产品方向', '面向 B2B 供应的编织绳与钩编绳'],
+    ['当前产品方向', '面向 B2B 供应的编织绳与钩编绳'],
     ['服务内容', '规格确认、包装沟通与外贸询盘支持']
   ],
   supportTitle: '围绕清晰外贸询盘建立合作流程',
@@ -76,7 +96,22 @@ const chinese: AboutCopy = {
     ['外贸询盘对接', '请在询盘中说明数量与目的国。我们将跟进报价细节、生产沟通及订单所需的出货资料对接。']
   ],
   recordsTitle: '企业信息说明',
-  recordsText: '公开企业名单可核验江苏吉隆环保科技有限公司位于沛县，并列入科技型中小企业相关名单。产品技术参数、订单文件和合规要求均以具体订单确认结果为准。',
+  recordsText: '江苏吉隆环保科技有限公司是一家集环保技术研发、纺织制品与塑料零件制造、物流运输及进出口业务于一体的综合性科技企业，在 MBR 膜内衬管等环保技术领域具有专利优势，并具备多项国家级、省级资质认证，业务覆盖国内外市场。当前出口网站以绳类产品采购信息为主，产品技术参数、订单文件和合规要求均以具体订单确认结果为准。',
+  credentialsTitle: '行业资质与荣誉',
+  credentials: [
+    ['高新技术企业', '2023 年认定'],
+    ['科技型中小企业', '2025 年'],
+    ['职业健康安全管理体系认证', '资料所示有效期至 2028-10-27'],
+    ['排污许可证', '资料所示有效期至 2030-09-07'],
+    ['企业信用', '曾获评“守合同重信用企业”']
+  ],
+  technologyTitle: '核心业务与技术基础',
+  technologyText: '公司资料显示，吉隆环保围绕环保 MBR 膜内衬管、绳网、纺织制品及相关塑料制品开展技术研发与制造。多元化的技术基础，有助于我们围绕不同终端应用需求进行产品沟通与项目支持。',
+  technologyItems: [
+    ['技术研发', '资料列示公司拥有多项发明专利，涉及 MBR 膜内衬管及增强型内衬支撑管等相关技术。'],
+    ['数字化支持', '公司资料列示已开发膜内衬管智能化生产监测管理系统、环保设备数据分析系统等软件。'],
+    ['应用与市场覆盖', '资料列示产品应用于航空航天、体育休闲、农业养殖、民生保障等领域，并销往全球 50 多个国家和地区。']
+  ],
   quote: '获取询价产品报价',
   resources: '产品目录与技术支持'
 };
@@ -110,6 +145,8 @@ export default async function AboutPage({params}: Props) {
     <section className="page-hero"><div className="container"><p className="breadcrumb"><Link href="/">GEELUNG</Link> / {copy.title}</p><p className="eyebrow">{copy.eyebrow}</p><h1>{copy.title}</h1><p className="lead">{copy.intro}</p><div className="button-row"><Link className="button" href="/inquiry">{copy.quote}</Link><Link className="button button-secondary" href="/resources">{copy.resources}</Link></div></div></section>
     <section className="section"><div className="container factory"><img src="/assets/rope-warehouse.webp" alt={copy.imageAlt} /><div><p className="eyebrow">GEELUNG · B2B ROPE SUPPLY</p><h2>{copy.focusTitle}</h2><p className="lead">{copy.focusText}</p></div></div></section>
     <section className="section section-soft"><div className="container"><div className="section-head"><div><p className="eyebrow">GEELUNG · COMPANY DETAILS</p><h2>{copy.recordsTitle}</h2></div></div><div className="contact-grid">{copy.facts.map(([label, value], index) => <article key={label} style={{border:'1px solid var(--line)', padding:'24px', background:index % 2 ? '#fff' : 'var(--surface)'}}><p className="eyebrow" style={{margin:'0 0 8px'}}>{label}</p><p style={{margin:0, fontWeight:700, lineHeight:1.55}}>{value}</p></article>)}<article style={{border:'1px solid var(--line)', padding:'24px', background:'#fff'}}><p className="eyebrow" style={{margin:'0 0 8px'}}>GEELUNG · PROFILE</p><p style={{margin:0, color:'var(--muted)', lineHeight:1.65}}>{copy.recordsText}</p></article></div></div></section>
+    <section className="section"><div className="container"><div className="section-head"><div><p className="eyebrow">GEELUNG · RECOGNITION</p><h2>{copy.credentialsTitle}</h2></div></div><div className="contact-grid">{copy.credentials.map(([label, value], index) => <article key={label} style={{border:'1px solid var(--line)', padding:'24px', background:index % 2 ? 'var(--surface)' : '#fff'}}><p className="eyebrow" style={{margin:'0 0 8px'}}>0{index + 1} · {label}</p><p style={{margin:0, fontWeight:700, lineHeight:1.55}}>{value}</p></article>)}</div></div></section>
+    <section className="section section-soft"><div className="container"><div className="section-head"><div><p className="eyebrow">GEELUNG · TECHNOLOGY FOUNDATION</p><h2>{copy.technologyTitle}</h2><p className="lead">{copy.technologyText}</p></div></div><div className="applications">{copy.technologyItems.map(([title, text], index) => <article className="application" key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
     <section className="section"><div className="container"><div className="section-head"><div><p className="eyebrow">GEELUNG · PROCUREMENT SUPPORT</p><h2>{copy.supportTitle}</h2><p className="lead">{copy.supportText}</p></div></div><div className="applications">{copy.supportItems.map(([title, text], index) => <article className="application" key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
     <section className="section section-soft"><div className="container resource-box"><p className="eyebrow">GEELUNG · START AN RFQ</p><h2>{locale === 'zh' ? '准备好产品需求，即可开始对接' : 'Bring your product requirements, and let’s start the RFQ'}</h2><p>{locale === 'zh' ? '请提交绳类类型、规格、数量、用途、包装偏好及目的国。我们将根据已确认的信息进行后续对接。' : 'Send rope type, target specification, quantity, application, packing preference and destination. We will follow up using the confirmed purchasing information.'}</p><div className="button-row"><Link className="button" href="/inquiry">{copy.quote}</Link><Link className="button button-secondary" href="/resources">{copy.resources}</Link></div></div></section>
   </main><script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schema)}} /></>;
