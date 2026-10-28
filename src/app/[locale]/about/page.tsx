@@ -21,8 +21,6 @@ type AboutCopy = {
   supportItems: Array<[string, string]>;
   recordsTitle: string;
   recordsText: string;
-  credentialsTitle: string;
-  credentials: Array<[string, string]>;
   technologyTitle: string;
   technologyText: string;
   technologyItems: Array<[string, string]>;
@@ -54,14 +52,6 @@ const english: AboutCopy = {
   ],
   recordsTitle: 'Company information',
   recordsText: 'Jiangsu Geelung Environmental Protection Technology Co., Ltd. is an integrated technology enterprise combining environmental-technology R&D, textile-product and plastic-part manufacturing, logistics transportation, and import and export business. The company information highlights patented advantages in environmental technologies including MBR membrane liner tubes, together with national and provincial qualifications and business coverage across domestic and overseas markets. For the current export website, GEELUNG focuses on clear, order-specific rope product information and confirms specifications, documents and compliance requirements case by case before production.',
-  credentialsTitle: 'Qualifications & recognition',
-  credentials: [
-    ['High-tech enterprise', 'Recognized in 2023'],
-    ['Technology-based SME', 'Listed in 2025'],
-    ['Occupational health & safety management system', 'Certificate validity listed through 27 Oct 2028'],
-    ['Pollutant discharge permit', 'Permit validity listed through 07 Sep 2030'],
-    ['Business credit', 'Previously recognized as a contract-honoring, credit-respecting enterprise']
-  ],
   technologyTitle: 'Technology & application foundation',
   technologyText: 'The supplied company information describes a diversified development base, including MBR membrane liner products, rope-net and textile products, and related manufacturing technologies. This technical background supports practical product development and project communication for different end-use requirements.',
   technologyItems: [
@@ -97,14 +87,6 @@ const chinese: AboutCopy = {
   ],
   recordsTitle: '企业信息说明',
   recordsText: '江苏吉隆环保科技有限公司是一家集环保技术研发、纺织制品与塑料零件制造、物流运输及进出口业务于一体的综合性科技企业，在 MBR 膜内衬管等环保技术领域具有专利优势，并具备多项国家级、省级资质认证，业务覆盖国内外市场。当前出口网站以绳类产品采购信息为主，产品技术参数、订单文件和合规要求均以具体订单确认结果为准。',
-  credentialsTitle: '行业资质与荣誉',
-  credentials: [
-    ['高新技术企业', '2023 年认定'],
-    ['科技型中小企业', '2025 年'],
-    ['职业健康安全管理体系认证', '资料所示有效期至 2028-10-27'],
-    ['排污许可证', '资料所示有效期至 2030-09-07'],
-    ['企业信用', '曾获评“守合同重信用企业”']
-  ],
   technologyTitle: '核心业务与技术基础',
   technologyText: '公司资料显示，吉隆环保围绕环保 MBR 膜内衬管、绳网、纺织制品及相关塑料制品开展技术研发与制造。多元化的技术基础，有助于我们围绕不同终端应用需求进行产品沟通与项目支持。',
   technologyItems: [
@@ -145,7 +127,6 @@ export default async function AboutPage({params}: Props) {
     <section className="page-hero"><div className="container"><p className="breadcrumb"><Link href="/">GEELUNG</Link> / {copy.title}</p><p className="eyebrow">{copy.eyebrow}</p><h1>{copy.title}</h1><p className="lead">{copy.intro}</p><div className="button-row"><Link className="button" href="/inquiry">{copy.quote}</Link><Link className="button button-secondary" href="/resources">{copy.resources}</Link></div></div></section>
     <section className="section"><div className="container factory"><img src="/assets/rope-warehouse.webp" alt={copy.imageAlt} /><div><p className="eyebrow">GEELUNG · B2B ROPE SUPPLY</p><h2>{copy.focusTitle}</h2><p className="lead">{copy.focusText}</p></div></div></section>
     <section className="section section-soft"><div className="container"><div className="section-head"><div><p className="eyebrow">GEELUNG · COMPANY DETAILS</p><h2>{copy.recordsTitle}</h2></div></div><div className="contact-grid">{copy.facts.map(([label, value], index) => <article key={label} style={{border:'1px solid var(--line)', padding:'24px', background:index % 2 ? '#fff' : 'var(--surface)'}}><p className="eyebrow" style={{margin:'0 0 8px'}}>{label}</p><p style={{margin:0, fontWeight:700, lineHeight:1.55}}>{value}</p></article>)}<article style={{border:'1px solid var(--line)', padding:'24px', background:'#fff'}}><p className="eyebrow" style={{margin:'0 0 8px'}}>GEELUNG · PROFILE</p><p style={{margin:0, color:'var(--muted)', lineHeight:1.65}}>{copy.recordsText}</p></article></div></div></section>
-    <section className="section"><div className="container"><div className="section-head"><div><p className="eyebrow">GEELUNG · RECOGNITION</p><h2>{copy.credentialsTitle}</h2></div></div><div className="contact-grid">{copy.credentials.map(([label, value], index) => <article key={label} style={{border:'1px solid var(--line)', padding:'24px', background:index % 2 ? 'var(--surface)' : '#fff'}}><p className="eyebrow" style={{margin:'0 0 8px'}}>0{index + 1} · {label}</p><p style={{margin:0, fontWeight:700, lineHeight:1.55}}>{value}</p></article>)}</div></div></section>
     <section className="section section-soft"><div className="container"><div className="section-head"><div><p className="eyebrow">GEELUNG · TECHNOLOGY FOUNDATION</p><h2>{copy.technologyTitle}</h2><p className="lead">{copy.technologyText}</p></div></div><div className="applications">{copy.technologyItems.map(([title, text], index) => <article className="application" key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
     <section className="section"><div className="container"><div className="section-head"><div><p className="eyebrow">GEELUNG · PROCUREMENT SUPPORT</p><h2>{copy.supportTitle}</h2><p className="lead">{copy.supportText}</p></div></div><div className="applications">{copy.supportItems.map(([title, text], index) => <article className="application" key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
     <section className="section section-soft"><div className="container resource-box"><p className="eyebrow">GEELUNG · START AN RFQ</p><h2>{locale === 'zh' ? '准备好产品需求，即可开始对接' : 'Bring your product requirements, and let’s start the RFQ'}</h2><p>{locale === 'zh' ? '请提交绳类类型、规格、数量、用途、包装偏好及目的国。我们将根据已确认的信息进行后续对接。' : 'Send rope type, target specification, quantity, application, packing preference and destination. We will follow up using the confirmed purchasing information.'}</p><div className="button-row"><Link className="button" href="/inquiry">{copy.quote}</Link><Link className="button button-secondary" href="/resources">{copy.resources}</Link></div></div></section>
