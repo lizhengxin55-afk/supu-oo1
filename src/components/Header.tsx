@@ -8,6 +8,9 @@ export async function Header() {
   const t = await getTranslations('navigation');
   const locale = await getLocale() as AppLocale;
   const copy = getRopeContent(locale);
+  const aboutLabels: Record<AppLocale, string> = {
+    en: 'About Us', fr: 'À propos', es: 'Sobre nosotros', ja: '会社概要', de: 'Über uns', zh: '关于我们'
+  };
   return (
     <header className="site-header">
       <div className="topline"><span>{copy.navigation.tagline}</span><span>{copy.navigation.support}</span></div>
@@ -19,6 +22,7 @@ export async function Header() {
           <Link href="/products/crochet-rope">{t('products')}</Link>
           <Link href="/#applications">{t('applications')}</Link>
           <Link href="/resources">{t('resources')}</Link>
+          <Link href="/about">{aboutLabels[locale]}</Link>
           <Link href="/contact">{t('contact')}</Link>
         </nav>
         <div className="header-actions"><LanguageSwitcher /><Link className="button button-small" href="/inquiry">{t('rfq')}</Link></div>
