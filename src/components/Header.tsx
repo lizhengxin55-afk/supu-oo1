@@ -18,7 +18,7 @@ export async function Header() {
         <nav className="desktop-nav" aria-label="Primary navigation">
           <Link href="/products/crochet-rope">{t('products')}</Link>
           <Link href="/#applications">{t('applications')}</Link>
-          <Link href="/#resources">{t('resources')}</Link>
+          <Link href="/resources">{t('resources')}</Link>
           <Link href="/contact">{t('contact')}</Link>
         </nav>
         <div className="header-actions"><LanguageSwitcher /><Link className="button button-small" href="/inquiry">{t('rfq')}</Link></div>
