@@ -5,7 +5,7 @@ export function QuoteForm({labels}: {labels: Labels}) {
     <input type="hidden" name="_subject" value="New GEELUNG Website Inquiry" />
     <input type="hidden" name="_template" value="table" />
     <input type="hidden" name="_next" value="https://www.geelung.com/thank-you" />
-    <input className="form-honey" type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+    <input type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0, pointerEvents: 'none'}} />
     <p className="eyebrow">GEELUNG · RFQ</p><h2>{labels.formTitle}</h2><p className="form-helper">{labels.helper}</p>
     <div className="form-grid">
       <label><span>{labels.name} <b>*</b></span><input name="name" required autoComplete="name" placeholder={labels.name} /></label>
