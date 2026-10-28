@@ -5,6 +5,7 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import {SITE_URL} from '@/lib/site';
 import {WhatsAppButton} from '@/components/WhatsAppButton';
+import {Footer} from '@/components/Footer';
 import '../globals.css';
 
 export const metadata: Metadata = {
@@ -21,6 +22,6 @@ export default async function LocaleLayout({children, params}: Readonly<{childre
   const {locale} = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
-  return <html lang={locale}><body><NextIntlClientProvider>{children}<WhatsAppButton /></NextIntlClientProvider></body></html>;
+  return <html lang={locale}><body><NextIntlClientProvider>{children}<Footer /><WhatsAppButton /></NextIntlClientProvider></body></html>;
 }
 
