@@ -1,39 +1,20 @@
-'use client';
-
-import {FormEvent, useState} from 'react';
-
-type Labels = {formTitle:string; name:string; email:string; phone:string; company:string; country:string; message:string; submit:string; helper:string; opening:string};
-
-const WHATSAPP_BASE = 'https://wa.me/8615996890066';
+type Labels = {formTitle:string; name:string; email:string; phone:string; company:string; country:string; message:string; submit:string; helper:string};
 
 export function QuoteForm({labels}: {labels: Labels}) {
-  const [status, setStatus] = useState('');
-
-  function submit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = event.currentTarget;
-    if (!form.checkValidity()) { form.reportValidity(); return; }
-    const data = new FormData(form);
-    const lines = [
-      `${labels.name}: ${data.get('name')}`,
-      `${labels.email}: ${data.get('email')}`,
-      `${labels.phone}: ${data.get('phone')}`,
-      data.get('company') ? `${labels.company}: ${data.get('company')}` : '',
-      data.get('country') ? `${labels.country}: ${data.get('country')}` : '',
-      data.get('message') ? `${labels.message}: ${data.get('message')}` : ''
-    ].filter(Boolean).join('\n');
-    setStatus(labels.opening);
-    window.location.assign(`${WHATSAPP_BASE}?text=${encodeURIComponent(`Hello GEELUNG, I would like to request a quote.\n\n${lines}`)}`);
-  }
-
-  return <form className="form-card quote-form" onSubmit={submit}><p className="eyebrow">GEELUNG · RFQ</p><h2>{labels.formTitle}</h2><p className="form-helper">{labels.helper}</p><div className="form-grid">
-    <label><span>{labels.name} <b>*</b></span><input name="name" required autoComplete="name" placeholder={labels.name} /></label>
-    <label><span>{labels.email} <b>*</b></span><input name="email" type="email" required autoComplete="email" placeholder={labels.email} /></label>
-    <label><span>{labels.phone} <b>*</b></span><input name="phone" type="tel" required autoComplete="tel" pattern="[+0-9() -]{6,}" title="Please enter a valid international phone number" placeholder="+86 159 9689 0066" /></label>
-    <label><span>{labels.company}</span><input name="company" autoComplete="organization" placeholder={labels.company} /></label>
-    <label><span>{labels.country}</span><input name="country" autoComplete="country-name" placeholder={labels.country} /></label>
-    <label className="form-message"><span>{labels.message}</span><textarea name="message" placeholder={labels.message} /></label>
-    <button className="button" type="submit">{labels.submit}</button>
-  </div>{status && <p className="form-status" role="status">{status}</p>}</form>;
+  return <form className="form-card quote-form" action="https://formsubmit.co/li1161870900@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New GEELUNG Website Inquiry" />
+    <input type="hidden" name="_template" value="table" />
+    <input type="hidden" name="_next" value="https://www.geelung.com/thank-you" />
+    <input className="form-honey" type="text" name="_honey" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+    <p className="eyebrow">GEELUNG · RFQ</p><h2>{labels.formTitle}</h2><p className="form-helper">{labels.helper}</p>
+    <div className="form-grid">
+      <label><span>{labels.name} <b>*</b></span><input name="name" required autoComplete="name" placeholder={labels.name} /></label>
+      <label><span>{labels.email} <b>*</b></span><input name="email" type="email" required autoComplete="email" placeholder={labels.email} /></label>
+      <label><span>{labels.phone} <b>*</b></span><input name="phone" type="tel" required autoComplete="tel" pattern="[+0-9() -]{6,}" title="Please enter a valid international phone number" placeholder="+86 159 9689 0066" /></label>
+      <label><span>{labels.company}</span><input name="company" autoComplete="organization" placeholder={labels.company} /></label>
+      <label><span>{labels.country}</span><input name="country" autoComplete="country-name" placeholder={labels.country} /></label>
+      <label className="form-message"><span>{labels.message}</span><textarea name="message" placeholder={labels.message} /></label>
+      <button className="button" type="submit">{labels.submit}</button>
+    </div>
+  </form>;
 }
-
