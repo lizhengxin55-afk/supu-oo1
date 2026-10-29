@@ -10,7 +10,7 @@ export const englishProductSeo = {
       ['Material', 'Polyester crochet cord options can be discussed against the required construction and end use.'],
       ['Diameter & thickness', 'Reference outer diameter: 1.0–2.5 mm; confirm the required diameter and tolerance before quotation.'],
       ['Tensile requirement', 'Strength requirements are reviewed against the confirmed material, construction, diameter and application.'],
-      ['Abrasion & water exposure', 'Select the material and braid structure around the expected abrasion level and wet or dry working environment.'],
+      ['Abrasion & water exposure', 'Select the material and braid structure around the expected abrasion level and wet or dry working environment; confirm any water-resistant or waterproof requirement for the application.'],
       ['Applications', 'Suitable for industrial assembly, sporting goods, agricultural use and other projects that require a specified cord format.'],
       ['Custom options', 'Color, diameter, length, spool format and carton marking can be aligned with your OEM/ODM requirement.'],
       ['Packing & lead time', 'Spool, roll or palletized export packing and production lead time are confirmed after the order specification and quantity are reviewed.'],
@@ -29,7 +29,7 @@ export const englishProductSeo = {
       ['Material', 'Nylon braided rope options can be evaluated against the end use, handling requirements and requested construction.'],
       ['Diameter & thickness', 'Reference outer diameter: 1.0–2.5 mm; share the target size and tolerance for a production-focused quotation.'],
       ['Tensile requirement', 'Required tensile performance is confirmed against the finished construction, diameter and intended loading condition.'],
-      ['Abrasion & water exposure', 'Discuss abrasion, moisture and water-exposure requirements so the material selection fits the working environment.'],
+      ['Abrasion & water exposure', 'Discuss abrasion, moisture and water-exposure requirements so the material selection fits the working environment, including any water-resistant or waterproof requirement.'],
       ['Applications', 'For industrial assembly, agriculture, recreation equipment and other applications where a repeatable braided-rope format is required.'],
       ['Custom options', 'OEM/ODM support can cover color, diameter, cut length, roll format, labels and outer-carton details.'],
       ['Packing & lead time', 'Roll, spool and palletized export packing are available; lead time is confirmed after specification, quantity and destination review.'],
@@ -42,3 +42,4 @@ export const englishProductSeo = {
 export function getEnglishProductSeo(slug: string) {
   return englishProductSeo[slug as keyof typeof englishProductSeo];
 }
+
