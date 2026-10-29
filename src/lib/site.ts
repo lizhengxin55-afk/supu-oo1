@@ -23,7 +23,7 @@ export const hreflangCodes: Record<AppLocale, string> = {
 
 export function localizedPath(locale: AppLocale, pathname: string) {
   const normalizedPath = pathname === '/' ? '' : pathname;
-  return locale === 'en' ? normalizedPath || '/' : `/${locale}${normalizedPath}`;
+  return locale === 'zh' ? normalizedPath || '/' : `/${locale}${normalizedPath}`;
 }
 
 export function absoluteUrl(locale: AppLocale, pathname: string) {
@@ -38,6 +38,6 @@ export function languageAlternates(pathname: string) {
     'ja-JP': absoluteUrl('ja', pathname),
     'de-DE': absoluteUrl('de', pathname),
     'zh-CN': absoluteUrl('zh', pathname),
-    'x-default': absoluteUrl('en', pathname)
+    'x-default': absoluteUrl('zh', pathname)
   };
 }
