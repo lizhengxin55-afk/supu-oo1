@@ -34,7 +34,7 @@ export function HomeHeroCarousel({company, heading, intro, requestLabel, catalog
   const showSlide = (index: number) => setActive((index + slides.length) % slides.length);
 
   return <section className="plan-one-hero plan-one-hero-carousel" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-    {slides.map((slide, index) => <img key={slide.src} className={index === active ? 'is-active' : ''} src={slide.src} alt={index === active ? slide.alt : ''} width="1600" height="1086" fetchPriority={index === 0 ? 'high' : undefined} />)}
+    {slides.map((slide, index) => <img key={slide.src} className={`plan-one-hero-slide plan-one-hero-slide-${index}${index === active ? ' is-active' : ''}`} src={slide.src} alt={index === active ? slide.alt : ''} width="1600" height="1086" fetchPriority={index === 0 ? 'high' : undefined} />)}
     <div className="plan-one-shade" />
     <div className="plan-one-shell plan-one-hero-copy">
       <p className="plan-one-overline">{company}</p>
