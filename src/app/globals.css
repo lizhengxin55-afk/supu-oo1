@@ -80,3 +80,7 @@ body:has(.home-plan-one) .site-header { background:#082945; box-shadow:none; }.s
 /* Fine positioning requested for the three homepage hero photos. */
 .plan-one-hero-copy { transform:translateX(-28px); }.plan-one-hero-carousel > img { transform:scale(1); transition:opacity .7s ease,transform .7s ease; }.plan-one-hero-carousel > img.plan-one-hero-slide-1 { transform:scale(.80); }.plan-one-hero-carousel > img.plan-one-hero-slide-2 { transform:translateX(5%) scale(1.11); }
 @media (max-width:860px) { .plan-one-hero-copy { transform:translateX(-6px); }.plan-one-hero-carousel > img.plan-one-hero-slide-1 { transform:scale(.86); }.plan-one-hero-carousel > img.plan-one-hero-slide-2 { transform:translateX(3%) scale(1.07); } }
+
+/* Final per-slide framing: show the full blue spool, keep the cord detail on the right, and give slide one more copy clearance. */
+.plan-one-hero-carousel > img.plan-one-hero-slide-1 { object-fit:contain; object-position:right center; transform:scale(.94); }.plan-one-hero-carousel > img.plan-one-hero-slide-2 { transform:scale(1.14) translateX(6%); }.plan-one-hero-carousel:has(.plan-one-hero-slide-0.is-active) .plan-one-hero-copy { transform:translateX(-64px); }
+@media (max-width:860px) { .plan-one-hero-carousel > img.plan-one-hero-slide-1 { transform:scale(.90); }.plan-one-hero-carousel > img.plan-one-hero-slide-2 { transform:scale(1.09) translateX(4%); }.plan-one-hero-carousel:has(.plan-one-hero-slide-0.is-active) .plan-one-hero-copy { transform:translateX(-12px); } }
