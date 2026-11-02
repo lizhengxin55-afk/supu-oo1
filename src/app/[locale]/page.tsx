@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import {setRequestLocale} from 'next-intl/server';
 import {Header} from '@/components/Header';
+import {HomeHeroCarousel} from '@/components/HomeHeroCarousel';
 import {Link} from '@/i18n/navigation';
 import {absoluteUrl, languageAlternates} from '@/lib/site';
 import {products} from '@/lib/products';
@@ -34,7 +35,7 @@ export default async function HomePage({params}: Props) {
   const copy = getRopeContent(locale); const {home} = copy; const text = ui[locale];
   const companySchema = {'@context':'https://schema.org','@type':'Organization',name:'GEELUNG',alternateName:'江苏吉隆环保科技有限公司',url:absoluteUrl(locale,'/'),logo:'https://www.geelung.com/assets/geelung-logo-web.jpg',address:{'@type':'PostalAddress',streetAddress:'Longgu Industrial Park',addressLocality:'Peixian, Xuzhou',addressRegion:'Jiangsu',addressCountry:'CN'}};
   return <><Header /><main className="home-plan-one">
-    <section className="plan-one-hero"><img src={assets.factory} alt="GEELUNG factory braided rope spools" width="1600" height="1086" fetchPriority="high" /><div className="plan-one-shade" /><div className="plan-one-shell plan-one-hero-copy"><p className="plan-one-overline">{text.company}</p><h1>{locale === 'zh' ? <>江苏吉隆环保科技<br />有限公司</> : text.company}</h1><p>{home.title}</p><p className="plan-one-intro">{home.intro}</p><div className="button-row"><Link className="button" href="/inquiry">{copy.productPage.request}</Link><a className="plan-one-hero-link" href="/assets/jilong-product-catalog.pdf">{text.catalog} <span aria-hidden>→</span></a></div><div className="plan-one-proof">{home.proof.map((item, index) => <div key={item}><strong>{item}</strong><span>{home.proofSub[index]}</span></div>)}</div></div></section>
+    <HomeHeroCarousel company={text.company} heading={home.title} intro={home.intro} requestLabel={copy.productPage.request} catalogLabel={text.catalog} proof={home.proof} proofSub={home.proofSub} locale={locale} />
 
     <section className="plan-one-section plan-one-about"><div className="plan-one-shell plan-one-about-grid"><div className="plan-one-media"><img src={assets.spool} alt="GEELUNG white braided rope on industrial spool" width="1200" height="842" loading="lazy" /><span className="plan-one-play" aria-hidden>▶</span></div><div><p className="plan-one-label">{text.about}</p><h2>{home.factoryTitle}</h2><p className="plan-one-copy">{home.factoryText}</p><div className="plan-one-stats">{home.factoryStats.map((stat, index) => <div key={stat}><strong>{stat}</strong><span>{home.factoryStatLabels[index]}</span></div>)}</div><Link className="plan-one-link" href="/about">{text.explore} <span aria-hidden>→</span></Link></div></div></section>
 
