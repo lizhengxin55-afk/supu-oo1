@@ -10,8 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: absoluteUrl(locale, path), lastModified: new Date(), changeFrequency: path === '/' ? 'weekly' as const : 'monthly' as const, priority: path === '/' ? 1 : 0.8,
     alternates: {languages: languageAlternates(path)}
   })));
-  const englishBlogPages: MetadataRoute.Sitemap = ['/blog', '/sitemap', ...blogPosts.map((post) => `/blog/${post.slug}`)].map((path) => ({
-    url: absoluteUrl('en', path), lastModified: new Date(), changeFrequency: 'monthly' as const, priority: path === '/blog' ? 0.7 : 0.6
-  }));
-  return [...localizedPages, ...englishBlogPages];
+  const localizedBlogPages: MetadataRoute.Sitemap = routing.locales.flatMap((locale) => ['/blog', '/sitemap', ...blogPosts.map((post) => `/blog/${post.slug}`)].map((path) => ({
+    url: absoluteUrl(locale, path), lastModified: new Date(), changeFrequency: 'monthly' as const, priority: path === '/blog' ? 0.7 : 0.6,
+    alternates: {languages: languageAlternates(path)}
+  })));
+  return [...localizedPages, ...localizedBlogPages];
 }
