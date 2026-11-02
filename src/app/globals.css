@@ -92,3 +92,6 @@ body:has(.home-plan-one) .site-header { background:#082945; box-shadow:none; }.s
 /* Keep slide two's cord detail entirely in the upper-right visual area, clear of the hero copy. */
 .plan-one-hero-carousel > img.plan-one-hero-slide-1 { object-fit:contain; object-position:right top; transform:scale(.82) translateX(15%) translateY(-9%); }
 @media (max-width:860px) { .plan-one-hero-carousel > img.plan-one-hero-slide-1 { object-position:right 8% top; transform:scale(.90) translateX(5%) translateY(-5%); } }
+
+/* Reserved slot for factory video until the approved file is supplied. */
+.plan-one-video-placeholder { display:grid; place-items:center; min-height:420px; background:linear-gradient(135deg,#092f59,#0d477d); border:1px solid rgba(131,215,237,.38); }.plan-one-video-placeholder span { color:#d8edf6; font-size:13px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(255,255,255,.42); padding:13px 18px; }
