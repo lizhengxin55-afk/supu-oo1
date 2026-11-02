@@ -35,7 +35,7 @@ export default async function HomePage({params}: Props) {
   const copy = getRopeContent(locale); const {home} = copy; const text = ui[locale];
   const companySchema = {'@context':'https://schema.org','@type':'Organization',name:'GEELUNG',alternateName:'江苏吉隆环保科技有限公司',url:absoluteUrl(locale,'/'),logo:'https://www.geelung.com/assets/geelung-logo-web.jpg',address:{'@type':'PostalAddress',streetAddress:'Longgu Industrial Park',addressLocality:'Peixian, Xuzhou',addressRegion:'Jiangsu',addressCountry:'CN'}};
   return <><Header /><main className="home-plan-one">
-    <HomeHeroCarousel company={text.company} heading={home.title} intro={home.intro} requestLabel={copy.productPage.request} catalogLabel={text.catalog} proof={home.proof} proofSub={home.proofSub} locale={locale} />
+    <HomeHeroCarousel company={text.company} heading={home.title} intro={home.intro} requestLabel={copy.productPage.request} catalogLabel={text.catalog} proof={home.proof} proofSub={home.proofSub} />
 
     <section className="plan-one-section plan-one-about"><div className="plan-one-shell plan-one-about-grid"><div className="plan-one-media plan-one-video-placeholder" aria-label={locale === 'zh' ? '工厂视频后续补充' : 'Factory video coming soon'}><span>{locale === 'zh' ? '视频资料后续补充' : 'Factory video coming soon'}</span></div><div><p className="plan-one-label">{text.about}</p><h2>{home.factoryTitle}</h2><p className="plan-one-copy">{home.factoryText}</p><div className="plan-one-stats">{home.factoryStats.map((stat, index) => <div key={stat}><strong>{stat}</strong><span>{home.factoryStatLabels[index]}</span></div>)}</div><Link className="plan-one-link" href="/about">{text.explore} <span aria-hidden>→</span></Link></div></div></section>
 
