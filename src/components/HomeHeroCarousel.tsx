@@ -16,7 +16,7 @@ type Props = {
 
 const slides = [
   {src:'/assets/geelung-factory-spools.webp', alt:'GEELUNG braided rope winding production line'},
-  {src:'/assets/geelung-white-rope-spool.webp', alt:'GEELUNG white braided rope on an industrial spool'},
+  {src:'/assets/geelung-white-rope-spool-clean.webp', alt:'GEELUNG white braided rope on a clean industrial spool'},
   {src:'/assets/geelung-crochet-cord-detail.webp', alt:'GEELUNG white crochet cord detail'}
 ];
 

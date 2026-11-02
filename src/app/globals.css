@@ -78,5 +78,5 @@ body:has(.home-plan-one) .site-header { background:#082945; box-shadow:none; }.s
 @media (prefers-reduced-motion:reduce) { .plan-one-hero-carousel > img { transition:none; } }
 
 /* Fine positioning requested for the three homepage hero photos. */
-.plan-one-hero-copy { transform:translateX(-28px); }.plan-one-hero-carousel > img { transform:scale(1); transition:opacity .7s ease,transform .7s ease; }.plan-one-hero-carousel > img.plan-one-hero-slide-1 { transform:scale(.88); }.plan-one-hero-carousel > img.plan-one-hero-slide-2 { transform:translateX(3%) scale(1.07); }
-@media (max-width:860px) { .plan-one-hero-copy { transform:translateX(-6px); }.plan-one-hero-carousel > img.plan-one-hero-slide-1 { transform:scale(.92); }.plan-one-hero-carousel > img.plan-one-hero-slide-2 { transform:translateX(2%) scale(1.04); } }
+.plan-one-hero-copy { transform:translateX(-28px); }.plan-one-hero-carousel > img { transform:scale(1); transition:opacity .7s ease,transform .7s ease; }.plan-one-hero-carousel > img.plan-one-hero-slide-1 { transform:scale(.80); }.plan-one-hero-carousel > img.plan-one-hero-slide-2 { transform:translateX(5%) scale(1.11); }
+@media (max-width:860px) { .plan-one-hero-copy { transform:translateX(-6px); }.plan-one-hero-carousel > img.plan-one-hero-slide-1 { transform:scale(.86); }.plan-one-hero-carousel > img.plan-one-hero-slide-2 { transform:translateX(3%) scale(1.07); } }
