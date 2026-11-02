@@ -26,9 +26,9 @@ export async function Header() {
           <Link href="/resources">{t('resources')}</Link>
           <Link href="/about">{aboutLabels[locale]}</Link>
           <Link href="/contact">{t('contact')}</Link>
-          {locale === 'en' && <Link href="/blog">Blog</Link>}
+          <Link href="/blog">{locale === 'zh' ? '技术博客' : locale === 'fr' ? 'Blog' : locale === 'es' ? 'Blog' : locale === 'ja' ? '技術ブログ' : locale === 'de' ? 'Blog' : 'Blog'}</Link>
         </nav>
-        <details className="mobile-nav"><summary aria-label={mobileMenuLabel[locale]}>{mobileMenuLabel[locale]}</summary><div><Link href="/products">{t('products')}</Link><Link href="/#applications">{t('applications')}</Link><Link href="/resources">{t('resources')}</Link><Link href="/about">{aboutLabels[locale]}</Link><Link href="/contact">{t('contact')}</Link>{locale === 'en' && <Link href="/blog">Blog</Link>}<Link className="button" href="/inquiry">{t('rfq')}</Link></div></details>
+        <details className="mobile-nav"><summary aria-label={mobileMenuLabel[locale]}>{mobileMenuLabel[locale]}</summary><div><Link href="/products">{t('products')}</Link><Link href="/#applications">{t('applications')}</Link><Link href="/resources">{t('resources')}</Link><Link href="/about">{aboutLabels[locale]}</Link><Link href="/contact">{t('contact')}</Link><Link href="/blog">{locale === 'zh' ? '技术博客' : locale === 'ja' ? '技術ブログ' : 'Blog'}</Link><Link className="button" href="/inquiry">{t('rfq')}</Link></div></details>
         <div className="header-actions"><LanguageSwitcher /><Link className="button button-small" href="/inquiry">{t('rfq')}</Link></div>
       </div>
     </header>
