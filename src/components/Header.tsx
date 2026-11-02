@@ -21,7 +21,7 @@ export async function Header() {
           <img src="/assets/geelung-logo-web.jpg" alt="GEELUNG 吉隆环保 logo" />
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
-          <div className="nav-products"><Link href="/products">{t('products')}</Link><div className="mega-menu">{products.map((product) => { const item = copy.products[product.key]; return <Link key={product.slug} href={`/products/${product.slug}`}><img src={product.image} alt={locale === 'en' ? product.imageAlt : item.title} width={product.width} height={product.height} /><span><strong>{item.title}</strong><small>{item.description}</small></span></Link>; })}</div></div>
+          <div className="nav-products"><Link href="/products">{t('products')}</Link><div className="mega-menu">{products.map((product) => { const item = copy.products[product.key]; return <Link key={product.slug} href={`/products/${product.slug}`}><span className="mega-menu-placeholder" role="img" aria-label={locale === 'en' ? product.imageAlt : item.title}>MEDIA</span><span><strong>{item.title}</strong><small>{item.description}</small></span></Link>; })}</div></div>
           <Link href="/#applications">{t('applications')}</Link>
           <Link href="/resources">{t('resources')}</Link>
           <Link href="/about">{aboutLabels[locale]}</Link>
