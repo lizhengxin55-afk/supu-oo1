@@ -88,3 +88,7 @@ body:has(.home-plan-one) .site-header { background:#082945; box-shadow:none; }.s
 /* Slide order was swapped: detail image is slide 2 at the right; full blue spool is slide 3. */
 .plan-one-hero-carousel > img.plan-one-hero-slide-1 { object-fit:cover; object-position:center; transform:scale(1.14) translateX(6%); }.plan-one-hero-carousel > img.plan-one-hero-slide-2 { object-fit:contain; object-position:right center; transform:scale(.94); }
 @media (max-width:860px) { .plan-one-hero-carousel > img.plan-one-hero-slide-1 { transform:scale(1.09) translateX(4%); }.plan-one-hero-carousel > img.plan-one-hero-slide-2 { transform:scale(.90); } }
+
+/* Keep slide two's cord detail entirely in the upper-right visual area, clear of the hero copy. */
+.plan-one-hero-carousel > img.plan-one-hero-slide-1 { object-fit:contain; object-position:right top; transform:scale(.82) translateX(15%) translateY(-9%); }
+@media (max-width:860px) { .plan-one-hero-carousel > img.plan-one-hero-slide-1 { object-position:right 8% top; transform:scale(.90) translateX(5%) translateY(-5%); } }
