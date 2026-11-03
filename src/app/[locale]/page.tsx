@@ -23,6 +23,7 @@ const assets = {
   factory:'/assets/geelung-factory-spools.webp',
   spool:'/assets/geelung-white-rope-spool-no-label.jpg',
   detail:'/assets/geelung-finished-braided-rope.jpg',
+  productionDetail:'/assets/geelung-two-crochet-cord-rolls-clean.jpg',
   customCrochet:'/assets/geelung-custom-crochet-cord-warm.jpg'
 };
 
@@ -46,7 +47,7 @@ export default async function HomePage({params}: Props) {
 
     <section className="plan-one-capabilities"><div className="plan-one-shell"><p className="plan-one-label">{text.capability}</p><h2>{locale === 'zh' ? '围绕外贸订单的全流程服务能力' : 'End-to-end support for export orders'}</h2><div>{['Material & specification','Diameter & color','Sample support','Packing proposal','Quality review','Export coordination','OEM / ODM'].map((item, index) => <article key={item}><span>0{index + 1}</span><h3>{locale === 'zh' ? ['材质与规格','外径与颜色','样品支持','包装方案','质量确认','出口对接','OEM / ODM'][index] : item}</h3><p>{locale === 'zh' ? '围绕确认后的采购要求进行清晰对接。' : 'Aligned with the confirmed procurement requirement.'}</p></article>)}</div></div></section>
 
-    <section className="plan-one-section plan-one-detail"><div className="plan-one-shell plan-one-detail-grid"><div><p className="plan-one-label">{home.factoryEyebrow}</p><h2>{locale === 'zh' ? '从原料到成品，关注每一个交付环节' : 'From material to finished product, focused on every delivery step'}</h2><p className="plan-one-copy">{home.resourcesText}</p><Link className="button" href="/resources">{text.explore}</Link></div><img src={assets.detail} alt="GEELUNG white crochet cord product detail" width="1200" height="1200" loading="lazy" /></div></section>
+    <section className="plan-one-section plan-one-detail"><div className="plan-one-shell plan-one-detail-grid"><div><p className="plan-one-label">{home.factoryEyebrow}</p><h2>{locale === 'zh' ? '从原料到成品，关注每一个交付环节' : 'From material to finished product, focused on every delivery step'}</h2><p className="plan-one-copy">{home.resourcesText}</p><Link className="button" href="/resources">{text.explore}</Link></div><img src={assets.productionDetail} alt="GEELUNG finished crochet cord rolls with product labels" width="1200" height="1200" loading="lazy" /></div></section>
 
     <section className="plan-one-contact"><div className="plan-one-shell"><p className="plan-one-label">GEELUNG · RFQ</p><h2>{text.contactTitle}</h2><p>{text.contactText}</p><Link className="button" href="/inquiry">{copy.productPage.request}</Link></div></section>
   </main><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(companySchema)}} /></>;

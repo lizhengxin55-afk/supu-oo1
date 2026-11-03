@@ -77,6 +77,9 @@ body:has(.home-plan-one) .site-header { background:#082945; box-shadow:none; }.s
 @media (max-width:860px) { .plan-one-hero h1 { font-size:clamp(30px,8.5vw,38px); line-height:1.18; letter-spacing:-.035em; }.plan-one-carousel-controls { right:4vw; bottom:20px; }.plan-one-carousel-arrow { width:34px; height:34px; }.plan-one-carousel-dots button.is-active { width:22px; } }
 @media (prefers-reduced-motion:reduce) { .plan-one-hero-carousel > img { transition:none; } }
 
+/* Preserve the full product-roll presentation in the homepage feature panel. */
+.plan-one-detail-grid > img { object-fit:contain; background:#e6e1dc; }
+
 /* Fine positioning requested for the three homepage hero photos. */
 .plan-one-hero-copy { transform:translateX(-28px); }.plan-one-hero-carousel > img { transform:scale(1); transition:opacity .7s ease,transform .7s ease; }.plan-one-hero-carousel > img.plan-one-hero-slide-1 { transform:scale(.80); }.plan-one-hero-carousel > img.plan-one-hero-slide-2 { transform:translateX(5%) scale(1.11); }
 @media (max-width:860px) { .plan-one-hero-copy { transform:translateX(-6px); }.plan-one-hero-carousel > img.plan-one-hero-slide-1 { transform:scale(.86); }.plan-one-hero-carousel > img.plan-one-hero-slide-2 { transform:translateX(3%) scale(1.07); } }
