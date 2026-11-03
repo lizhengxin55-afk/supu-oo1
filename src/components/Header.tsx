@@ -18,7 +18,7 @@ export async function Header() {
       <div className="topline"><span>{copy.navigation.tagline}</span><span>{copy.navigation.support}</span></div>
       <div className="header-shell">
         <Link className="brand" href="/" aria-label="GEELUNG home">
-          <img src="/assets/geelung-logo-web.jpg" alt="GEELUNG 吉隆环保 logo" />
+          <img src="/assets/geelung-logo-transparent.png" alt="GEELUNG 吉隆环保 logo" />
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
           <div className="nav-products"><Link href="/products">{t('products')}</Link><div className="mega-menu">{products.map((product) => { const item = copy.products[product.key]; return <Link key={product.slug} href={`/products/${product.slug}`}><span className="mega-menu-placeholder" role="img" aria-label={locale === 'en' ? product.imageAlt : item.title}>MEDIA</span><span><strong>{item.title}</strong><small>{item.description}</small></span></Link>; })}</div></div>

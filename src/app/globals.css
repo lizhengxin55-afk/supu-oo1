@@ -99,3 +99,8 @@ body:has(.home-plan-one) .site-header { background:#082945; box-shadow:none; }.s
 
 /* Reserved slot for factory video until the approved file is supplied. */
 .plan-one-video-placeholder { display:grid; place-items:center; min-height:420px; background:linear-gradient(135deg,#092f59,#0d477d); border:1px solid rgba(131,215,237,.38); }.plan-one-video-placeholder span { color:#d8edf6; font-size:13px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; border:1px solid rgba(255,255,255,.42); padding:13px 18px; }
+
+/* Final hero alignment: keep the complete copy block on the left on every viewport. */
+.home-plan-one .plan-one-hero-copy { width:min(760px,88vw); margin-left:clamp(28px,7vw,120px); margin-right:0; transform:none; }
+.home-plan-one .plan-one-hero-carousel:has(.plan-one-hero-slide-0.is-active) .plan-one-hero-copy { transform:none; }
+@media (max-width:860px) { .home-plan-one .plan-one-hero-copy { width:88vw; margin-left:6vw; margin-right:0; transform:none; }.home-plan-one .plan-one-hero-carousel:has(.plan-one-hero-slide-0.is-active) .plan-one-hero-copy { transform:none; } }

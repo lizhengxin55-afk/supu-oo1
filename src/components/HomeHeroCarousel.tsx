@@ -21,7 +21,6 @@ export function HomeHeroCarousel({company, heading, intro, requestLabel, catalog
     {slides.map((slide, index) => <img key={slide.src} className={`plan-one-hero-slide plan-one-hero-slide-${index} is-active`} src={slide.src} alt={slide.alt} width="1600" height="1086" fetchPriority="high" />)}
     <div className="plan-one-shade" />
     <div className="plan-one-shell plan-one-hero-copy">
-      <p className="plan-one-overline">{company}</p>
       <h1>{company}</h1>
       <p>{heading}</p>
       <p className="plan-one-intro">{intro}</p>
