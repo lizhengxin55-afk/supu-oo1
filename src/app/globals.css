@@ -108,3 +108,6 @@ body:has(.home-plan-one) .site-header { background:#082945; box-shadow:none; }.s
 /* Dedicated video library; videos can be replaced independently without affecting the company page. */
 .video-hero-copy { padding:82px 0; }.video-library-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }.video-library-card { background:#fff; border:1px solid var(--line); }.video-library-card .media-placeholder { min-height:228px; border:0; border-bottom:1px solid var(--line); }.video-library-card > div:last-child { padding:23px; }.video-library-card h2 { font-size:24px; line-height:1.2; margin:8px 0 12px; }.video-library-card p:not(.eyebrow) { color:var(--muted); line-height:1.6; min-height:52px; margin:0 0 20px; }.video-library-card .text-link { display:inline-flex; }
 @media (max-width:860px) { .video-hero-copy { padding:58px 0; }.video-library-grid { grid-template-columns:1fr; }.video-library-card .media-placeholder { min-height:260px; } }
+
+/* Homepage video slot sits immediately before the About GEELUNG section for later upload. */
+.plan-one-video-section { background:#f5f8fb; }.plan-one-video-section .plan-one-heading { margin-bottom:28px; }.plan-one-video-section .plan-one-video-placeholder { min-height:clamp(280px,44vw,540px); width:100%; }
