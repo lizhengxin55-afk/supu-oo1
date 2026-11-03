@@ -118,3 +118,5 @@ body:has(.home-plan-one) .site-header { background:#082945; box-shadow:none; }.s
 
 #culture,#message { scroll-margin-top:156px; }
 @media (max-width:860px) { #culture,#message { scroll-margin-top:140px; } }
+
+.about-profile-intro h2 { margin:0; }
