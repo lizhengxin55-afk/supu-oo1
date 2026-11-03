@@ -21,9 +21,9 @@ const ui: Record<AppLocale, {company:string; catalog:string; products:string; ab
 
 const assets = {
   factory:'/assets/geelung-factory-spools.webp',
-  spool:'/assets/geelung-white-rope-spool.webp',
+  spool:'/assets/geelung-white-rope-spool-no-label.jpg',
   detail:'/assets/geelung-finished-braided-rope.jpg',
-  customCrochet:'/assets/geelung-custom-crochet-cord-white.jpg'
+  customCrochet:'/assets/geelung-custom-crochet-cord-warm.jpg'
 };
 
 export async function generateMetadata({params}: Props): Promise<Metadata> {
