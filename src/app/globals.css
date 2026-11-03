@@ -104,3 +104,7 @@ body:has(.home-plan-one) .site-header { background:#082945; box-shadow:none; }.s
 .home-plan-one .plan-one-hero-copy { width:min(760px,88vw); margin-left:clamp(28px,7vw,120px); margin-right:0; transform:none; }
 .home-plan-one .plan-one-hero-carousel:has(.plan-one-hero-slide-0.is-active) .plan-one-hero-copy { transform:none; }
 @media (max-width:860px) { .home-plan-one .plan-one-hero-copy { width:88vw; margin-left:6vw; margin-right:0; transform:none; }.home-plan-one .plan-one-hero-carousel:has(.plan-one-hero-slide-0.is-active) .plan-one-hero-copy { transform:none; } }
+
+/* Dedicated video library; videos can be replaced independently without affecting the company page. */
+.video-hero-copy { padding:82px 0; }.video-library-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }.video-library-card { background:#fff; border:1px solid var(--line); }.video-library-card .media-placeholder { min-height:228px; border:0; border-bottom:1px solid var(--line); }.video-library-card > div:last-child { padding:23px; }.video-library-card h2 { font-size:24px; line-height:1.2; margin:8px 0 12px; }.video-library-card p:not(.eyebrow) { color:var(--muted); line-height:1.6; min-height:52px; margin:0 0 20px; }.video-library-card .text-link { display:inline-flex; }
+@media (max-width:860px) { .video-hero-copy { padding:58px 0; }.video-library-grid { grid-template-columns:1fr; }.video-library-card .media-placeholder { min-height:260px; } }

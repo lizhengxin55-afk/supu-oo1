@@ -12,6 +12,9 @@ export async function Header() {
   const aboutLabels: Record<AppLocale, string> = {
     en: 'About Us', fr: 'À propos', es: 'Sobre nosotros', ja: '会社概要', de: 'Über uns', zh: '关于我们'
   };
+  const videoLabels: Record<AppLocale, string> = {
+    en: 'Videos', fr: 'Vidéos', es: 'Vídeos', ja: '動画資料', de: 'Videos', zh: '视频资料'
+  };
   const mobileMenuLabel: Record<AppLocale, string> = {en:'Menu', fr:'Menu', es:'Menú', ja:'メニュー', de:'Menü', zh:'菜单'};
   return (
     <header className="site-header">
@@ -24,11 +27,12 @@ export async function Header() {
           <div className="nav-products"><Link href="/products">{t('products')}</Link><div className="mega-menu">{products.map((product) => { const item = copy.products[product.key]; return <Link key={product.slug} href={`/products/${product.slug}`}><span className="mega-menu-placeholder" role="img" aria-label={locale === 'en' ? product.imageAlt : item.title}>MEDIA</span><span><strong>{item.title}</strong><small>{item.description}</small></span></Link>; })}</div></div>
           <Link href="/#applications">{t('applications')}</Link>
           <Link href="/resources">{t('resources')}</Link>
+          <Link href="/videos">{videoLabels[locale]}</Link>
           <Link href="/about">{aboutLabels[locale]}</Link>
           <Link href="/contact">{t('contact')}</Link>
           <Link href="/blog">{locale === 'zh' ? '技术博客' : locale === 'fr' ? 'Blog' : locale === 'es' ? 'Blog' : locale === 'ja' ? '技術ブログ' : locale === 'de' ? 'Blog' : 'Blog'}</Link>
         </nav>
-        <details className="mobile-nav"><summary aria-label={mobileMenuLabel[locale]}>{mobileMenuLabel[locale]}</summary><div><Link href="/products">{t('products')}</Link><Link href="/#applications">{t('applications')}</Link><Link href="/resources">{t('resources')}</Link><Link href="/about">{aboutLabels[locale]}</Link><Link href="/contact">{t('contact')}</Link><Link href="/blog">{locale === 'zh' ? '技术博客' : locale === 'ja' ? '技術ブログ' : 'Blog'}</Link><Link className="button" href="/inquiry">{t('rfq')}</Link></div></details>
+        <details className="mobile-nav"><summary aria-label={mobileMenuLabel[locale]}>{mobileMenuLabel[locale]}</summary><div><Link href="/products">{t('products')}</Link><Link href="/#applications">{t('applications')}</Link><Link href="/resources">{t('resources')}</Link><Link href="/videos">{videoLabels[locale]}</Link><Link href="/about">{aboutLabels[locale]}</Link><Link href="/contact">{t('contact')}</Link><Link href="/blog">{locale === 'zh' ? '技术博客' : locale === 'ja' ? '技術ブログ' : 'Blog'}</Link><Link className="button" href="/inquiry">{t('rfq')}</Link></div></details>
         <div className="header-actions"><LanguageSwitcher /><Link className="button button-small" href="/inquiry">{t('rfq')}</Link></div>
       </div>
     </header>

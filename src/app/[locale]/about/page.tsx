@@ -35,7 +35,7 @@ const english: AboutCopy = {
   intro: 'Jiangsu Geelung Environmental Protection Technology Co., Ltd. is located in Longgu Industrial Park, Peixian, Xuzhou, Jiangsu, China. Built on environmental-technology, rope-net and textile-product development, we support overseas buyers with braided rope and crochet rope products, specification communication, export packing coordination and responsive RFQ service.',
   focusTitle: 'A practical partner for industrial rope procurement',
   focusText: 'Our current product focus is white braided rope and crochet rope supplied in rolls, large spools and export-ready packing formats. For each project, we work from the required diameter, construction, quantity, application and destination so the quotation and supply plan are clear before production.',
-  imageAlt: 'GEELUNG braided rope rolls prepared for industrial orders',
+  imageAlt: 'Aerial view of Jiangsu GEELUNG factory in Longgu Industrial Park',
   facts: [
     ['Company', 'Jiangsu Geelung Environmental Protection Technology Co., Ltd.'],
     ['Brand', 'GEELUNG'],
@@ -70,7 +70,7 @@ const chinese: AboutCopy = {
   intro: '江苏吉隆环保科技有限公司位于江苏省徐州市沛县龙固镇工业园区。公司拥有环保技术、绳网与纺织制品等研发制造基础，现面向海外采购客户提供编织绳、钩编绳产品，以及规格沟通、出口包装协调和询盘对接服务。',
   focusTitle: '服务工业绳类采购的务实伙伴',
   focusText: '当前产品以白色编织绳、钩编绳为主，可提供成卷、大盘及适配出口订单的包装形式。每个项目从所需外径、结构、数量、应用场景和目的国出发，在生产前明确报价与供货方案。',
-  imageAlt: 'GEELUNG 吉隆环保工业订单用编织绳卷',
+  imageAlt: '江苏吉隆环保科技有限公司龙固镇工业园区工厂航拍图',
   facts: [
     ['公司名称', '江苏吉隆环保科技有限公司'],
     ['品牌名称', 'GEELUNG · 吉隆环保'],
@@ -125,11 +125,10 @@ export default async function AboutPage({params}: Props) {
 
   return <><Header /><main className="about-page">
     <section className="page-hero"><div className="container"><p className="breadcrumb"><Link href="/">GEELUNG</Link> / {copy.title}</p><p className="eyebrow">{copy.eyebrow}</p><h1>{copy.title}</h1><p className="lead">{copy.intro}</p><div className="button-row"><Link className="button" href="/inquiry">{copy.quote}</Link><Link className="button button-secondary" href="/resources">{copy.resources}</Link></div></div></section>
-    <section className="section"><div className="container factory"><img src="/assets/rope-warehouse.webp" alt={copy.imageAlt} /><div><p className="eyebrow">{locale === 'zh' ? 'GEELUNG · B2B 绳类供应' : 'GEELUNG · B2B ROPE SUPPLY'}</p><h2>{copy.focusTitle}</h2><p className="lead">{copy.focusText}</p></div></div></section>
+    <section className="section"><div className="container factory"><img src="/assets/geelung-factory-aerial.png" alt={copy.imageAlt} width="686" height="385" /><div><p className="eyebrow">{locale === 'zh' ? 'GEELUNG · B2B 绳类供应' : 'GEELUNG · B2B ROPE SUPPLY'}</p><h2>{copy.focusTitle}</h2><p className="lead">{copy.focusText}</p></div></div></section>
     <section className="section section-soft"><div className="container"><div className="section-head"><div><p className="eyebrow">{locale === 'zh' ? 'GEELUNG · 企业信息' : 'GEELUNG · COMPANY DETAILS'}</p><h2>{copy.recordsTitle}</h2></div></div><div className="contact-grid">{copy.facts.map(([label, value], index) => <article key={label} style={{border:'1px solid var(--line)', padding:'24px', background:index % 2 ? '#fff' : 'var(--surface)'}}><p className="eyebrow" style={{margin:'0 0 8px'}}>{label}</p><p style={{margin:0, fontWeight:700, lineHeight:1.55}}>{value}</p></article>)}<article style={{border:'1px solid var(--line)', padding:'24px', background:'#fff'}}><p className="eyebrow" style={{margin:'0 0 8px'}}>{locale === 'zh' ? 'GEELUNG · 公司介绍' : 'GEELUNG · PROFILE'}</p><p style={{margin:0, color:'var(--muted)', lineHeight:1.65}}>{copy.recordsText}</p></article></div></div></section>
     <section className="section section-soft"><div className="container"><div className="section-head"><div><p className="eyebrow">{locale === 'zh' ? 'GEELUNG · 技术基础' : 'GEELUNG · TECHNOLOGY FOUNDATION'}</p><h2>{copy.technologyTitle}</h2><p className="lead">{copy.technologyText}</p></div></div><div className="applications">{copy.technologyItems.map(([title, text], index) => <article className="application" key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
     <section className="section"><div className="container"><div className="section-head"><div><p className="eyebrow">{locale === 'zh' ? 'GEELUNG · 采购支持' : 'GEELUNG · PROCUREMENT SUPPORT'}</p><h2>{copy.supportTitle}</h2><p className="lead">{copy.supportText}</p></div></div><div className="applications">{copy.supportItems.map(([title, text], index) => <article className="application" key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
     <section className="section section-soft"><div className="container resource-box"><p className="eyebrow">{locale === 'zh' ? 'GEELUNG · 开始询盘' : 'GEELUNG · START AN RFQ'}</p><h2>{locale === 'zh' ? '准备好产品需求，即可开始对接' : 'Bring your product requirements, and let’s start the RFQ'}</h2><p>{locale === 'zh' ? '请提交绳类类型、规格、数量、用途、包装偏好及目的国。我们将根据已确认的信息进行后续对接。' : 'Send rope type, target specification, quantity, application, packing preference and destination. We will follow up using the confirmed purchasing information.'}</p><div className="button-row"><Link className="button" href="/inquiry">{copy.quote}</Link><Link className="button button-secondary" href="/resources">{copy.resources}</Link></div></div></section>
   </main><script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schema)}} /></>;
 }
-
