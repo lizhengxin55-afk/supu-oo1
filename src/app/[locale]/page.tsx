@@ -22,7 +22,8 @@ const ui: Record<AppLocale, {company:string; catalog:string; products:string; ab
 const assets = {
   factory:'/assets/geelung-factory-spools.webp',
   spool:'/assets/geelung-white-rope-spool.webp',
-  detail:'/assets/geelung-crochet-cord-detail.webp'
+  detail:'/assets/geelung-crochet-cord-detail.webp',
+  customCrochet:'/assets/geelung-custom-crochet-cord-white.jpg'
 };
 
 export async function generateMetadata({params}: Props): Promise<Metadata> {
@@ -41,7 +42,7 @@ export default async function HomePage({params}: Props) {
 
     <section className="plan-one-section plan-one-about"><div className="plan-one-shell plan-one-about-grid"><div className="plan-one-media"><img src="/assets/geelung-factory-aerial.png" alt={locale === 'zh' ? '江苏吉隆环保科技有限公司工厂航拍图' : 'Aerial view of Jiangsu GEELUNG factory'} width="686" height="385" loading="lazy" /></div><div><p className="plan-one-label">{text.about}</p><h2>{home.factoryTitle}</h2><p className="plan-one-copy">{home.factoryText}</p><div className="plan-one-stats">{home.factoryStats.map((stat, index) => <div key={stat}><strong>{stat}</strong><span>{home.factoryStatLabels[index]}</span></div>)}</div><Link className="plan-one-link" href="/about">{text.explore} <span aria-hidden>→</span></Link></div></div></section>
 
-    <section className="plan-one-section plan-one-products"><div className="plan-one-shell"><div className="plan-one-heading"><div><p className="plan-one-label">{home.productsEyebrow}</p><h2>{home.productsTitle}</h2></div><Link className="plan-one-link" href="/products">{text.products} <span aria-hidden>→</span></Link></div><div className="plan-one-product-grid">{products.map((product, index) => { const item = copy.products[product.key]; const image = [assets.spool, assets.factory, assets.detail, assets.factory][index]; return <Link key={product.slug} href={`/products/${product.slug}`} className="plan-one-product"><img src={image} alt={item.title} width="1200" height="842" loading="lazy" /><div><p>0{index + 1}</p><h3>{item.title}</h3><span>{item.description}</span><b aria-hidden>→</b></div></Link>; })}</div></div></section>
+    <section className="plan-one-section plan-one-products"><div className="plan-one-shell"><div className="plan-one-heading"><div><p className="plan-one-label">{home.productsEyebrow}</p><h2>{home.productsTitle}</h2></div><Link className="plan-one-link" href="/products">{text.products} <span aria-hidden>→</span></Link></div><div className="plan-one-product-grid">{products.map((product, index) => { const item = copy.products[product.key]; const image = [assets.spool, assets.factory, assets.detail, assets.customCrochet][index]; return <Link key={product.slug} href={`/products/${product.slug}`} className="plan-one-product"><img src={image} alt={item.title} width="1200" height="842" loading="lazy" /><div><p>0{index + 1}</p><h3>{item.title}</h3><span>{item.description}</span><b aria-hidden>→</b></div></Link>; })}</div></div></section>
 
     <section className="plan-one-capabilities"><div className="plan-one-shell"><p className="plan-one-label">{text.capability}</p><h2>{locale === 'zh' ? '围绕外贸订单的全流程服务能力' : 'End-to-end support for export orders'}</h2><div>{['Material & specification','Diameter & color','Sample support','Packing proposal','Quality review','Export coordination','OEM / ODM'].map((item, index) => <article key={item}><span>0{index + 1}</span><h3>{locale === 'zh' ? ['材质与规格','外径与颜色','样品支持','包装方案','质量确认','出口对接','OEM / ODM'][index] : item}</h3><p>{locale === 'zh' ? '围绕确认后的采购要求进行清晰对接。' : 'Aligned with the confirmed procurement requirement.'}</p></article>)}</div></div></section>
 
