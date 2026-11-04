@@ -138,3 +138,8 @@ body:has(.home-plan-one) .site-header { background:#082945; box-shadow:none; }.s
 .catalog-card > div { justify-content:center; text-align:center; }
 .catalog-card > div { display:grid; align-content:center; min-height:154px; }.catalog-card p { max-width:430px; margin:10px auto 0; color:#587087; font-size:14px; line-height:1.55; }.catalog-card:hover p { color:#365b78; }
 @media (max-width:900px) { .catalog-card > div { min-height:126px; }.catalog-card p { font-size:13px; line-height:1.45; } }
+
+/* Confirmed technical parameters shown as a compact bilingual table. */
+.technical-spec-table { width:100%; margin:25px 0 18px; border-collapse:collapse; table-layout:fixed; border:1px solid #b6c5d1; color:var(--ink); background:#fff; }.technical-spec-table th,.technical-spec-table td { border:1px solid #b6c5d1; padding:11px 16px; text-align:center; vertical-align:middle; }.technical-spec-table th { width:38%; font-size:14px; line-height:1.35; font-weight:800; background:#f5f8fb; }.technical-spec-table td { font-size:14px; line-height:1.55; }.technical-spec-table tr:first-child td { padding-top:14px; padding-bottom:14px; }
+.technical-overview { margin-top:30px; }.technical-overview > h3 { margin:0; color:#0b315f; font-size:20px; line-height:1.3; }
+@media (max-width:560px) { .technical-spec-table th,.technical-spec-table td { padding:9px 8px; font-size:12px; }.technical-spec-table th { width:42%; } }
