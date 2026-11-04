@@ -2,7 +2,6 @@ import {getLocale, getTranslations} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import {LanguageSwitcher} from './LanguageSwitcher';
 import {getRopeContent} from '@/lib/rope-content';
-import {products} from '@/lib/products';
 import type {AppLocale} from '@/i18n/routing';
 
 export async function Header() {
@@ -21,7 +20,7 @@ export async function Header() {
           <img src="/assets/geelung-logo-transparent.png" alt="GEELUNG 吉隆环保 logo" />
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
-          <div className="nav-products"><Link href="/products">{t('products')}</Link><div className="mega-menu">{products.map((product) => { const item = copy.products[product.key]; return <Link key={product.slug} href={`/products/${product.slug}`}><span className="mega-menu-placeholder" role="img" aria-label={locale === 'en' ? product.imageAlt : item.title}>MEDIA</span><span><strong>{item.title}</strong><small>{item.description}</small></span></Link>; })}</div></div>
+          <Link href="/products">{t('products')}</Link>
           <Link href="/#applications">{t('applications')}</Link>
           <Link href="/resources">{t('resources')}</Link>
           <Link href="/about">{aboutLabels[locale]}</Link>
