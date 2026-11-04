@@ -136,3 +136,5 @@ body:has(.home-plan-one) .site-header { background:#082945; box-shadow:none; }.s
 
 /* Reference-gallery labels stay calm and centered; each whole card remains the link. */
 .catalog-card > div { justify-content:center; text-align:center; }
+.catalog-card > div { display:grid; align-content:center; min-height:154px; }.catalog-card p { max-width:430px; margin:10px auto 0; color:#587087; font-size:14px; line-height:1.55; }.catalog-card:hover p { color:#365b78; }
+@media (max-width:900px) { .catalog-card > div { min-height:126px; }.catalog-card p { font-size:13px; line-height:1.45; } }
